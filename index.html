@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zumk.work | Fursuit Photography Commission</title>
+    
+    <!-- Pretendard Web Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            500: '#8b5cf6', // 퍼플 포인트 컬러
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Remix Icon (for icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        /* Custom CSS */
+        body { font-family: 'Pretendard', sans-serif; }
+        
+        /* Hero Marquee Animation */
+        .marquee-container {
+            display: flex;
+            width: 200%;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee-container:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Lightbox transitions */
+        #lightbox {
+            transition: opacity 0.3s ease-in-out;
+        }
+        #lightbox.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Navigation transition */
+        #navbar { transition: background-color 0.3s, backdrop-filter 0.3s; }
+        .scrolled {
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hide scrollbar for gallery */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-neutral-950 text-neutral-300 selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 py-4 px-6 md:px-12 flex justify-between items-center text-white">
+        <a href="#" class="text-2xl font-bold tracking-tighter">zumk.work</a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-neutral-400">
+            <a href="#features" class="hover:text-white transition">Features</a>
+            <a href="#pricing" class="hover:text-white transition">Pricing</a>
+            <a href="#process" class="hover:text-white transition">Process</a>
+            <a href="#gallery" class="hover:text-white transition">Gallery</a>
+            <a href="#faq" class="hover:text-white transition">FAQ</a>
+        </div>
+        <a href="#contact" class="hidden md:block bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-neutral-200 transition">예약 문의</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col justify-center overflow-hidden bg-neutral-900 pt-20">
+        <!-- Background Gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/40 via-neutral-950/60 to-neutral-950 z-10"></div>
+        
+        <div class="relative z-20 text-center px-6 max-w-4xl mx-auto mt-20 mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                당신의 퍼슈트를 <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-400">가장 빛나는 순간</span>으로 기록해 드립니다.
+            </h1>
+            <p class="text-lg md:text-xl text-neutral-400 mb-10">
+                캐릭터의 개성과 오너의 디테일한 요청을 담아내는 전문 사진 촬영 커미션
+            </p>
+            <a href="#gallery" class="inline-flex items-center space-x-2 text-white border border-neutral-700 bg-neutral-800/50 hover:bg-neutral-800 px-6 py-3 rounded-full transition backdrop-blur-sm">
+                <span>포트폴리오 보기</span>
+                <i class="ri-arrow-down-line"></i>
+            </a>
+        </div>
+
+        <!-- Infinite Scrolling Portfolio Strip (Approx 10-20 images) -->
+        <div class="relative z-20 mt-auto pb-10 w-full overflow-hidden">
+            <div class="marquee-container gap-4 px-4">
+                <!-- Group 1 -->
+                <div class="flex gap-4 shrink-0">
+                    <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 1">
+                    <img src="https://images.unsplash.com/photo-1542451542907-6cf80ff362d6?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 2">
+                    <img src="https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 3">
+                    <img src="https://images.unsplash.com/photo-1520315342629-6ea920342047?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 4">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23df1cece3e9?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 5">
+                </div>
+                <!-- Group 2 (Duplicate for seamless loop) -->
+                <div class="flex gap-4 shrink-0">
+                    <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 1">
+                    <img src="https://images.unsplash.com/photo-1542451542907-6cf80ff362d6?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 2">
+                    <img src="https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 3">
+                    <img src="https://images.unsplash.com/photo-1520315342629-6ea920342047?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 4">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23df1cece3e9?auto=format&fit=crop&q=80&w=400&h=300" class="h-48 md:h-64 rounded-xl object-cover" alt="Portfolio 5">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Me?</h2>
+            <p class="text-neutral-400">퍼슈트 촬영에 특화된 전문성과 디테일</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl hover:border-neutral-700 transition">
+                <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-brand-500 mb-6 text-2xl">
+                    <i class="ri-user-smile-line"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">퍼슈트 전문 스냅</h3>
+                <p class="text-neutral-400 leading-relaxed text-sm">퍼슈트와 퍼슈터에 대한 높은 이해도를 바탕으로, 액팅과 포즈의 포인트를 정확히 캐치하여 캐릭터의 매력을 극대화합니다.</p>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl hover:border-neutral-700 transition">
+                <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-brand-500 mb-6 text-2xl">
+                    <i class="ri-camera-lens-line"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">디테일한 컨셉 촬영</h3>
+                <p class="text-neutral-400 leading-relaxed text-sm">오너의 요청에 맞춘 맞춤형 디렉팅을 제공합니다. EOS R5, R7과 같은 하이엔드 장비의 렌즈 해상력과 코닥 400 특유의 아날로그 감성을 더해 트렌디한 결과물을 냅니다.</p>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl hover:border-neutral-700 transition">
+                <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-brand-500 mb-6 text-2xl">
+                    <i class="ri-timer-flash-line"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">신속하고 꼼꼼한 작업</h3>
+                <p class="text-neutral-400 leading-relaxed text-sm">촬영 후 빠른 프리뷰를 제공하며, 한 장 한 장 정밀한 색감 및 디테일 보정을 거쳐 평균 3주, 최대 5주 내에 완성본을 전달해 드립니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Rights Section -->
+    <section id="pricing" class="py-24 bg-neutral-900 px-6 md:px-12 border-y border-neutral-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Commission Pricing</h2>
+                <p class="text-neutral-400">투명하고 합리적인 비용 안내</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Basic -->
+                <div class="bg-neutral-950 p-8 rounded-3xl border border-neutral-800 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-500"></div>
+                    <h3 class="text-2xl font-bold text-white mb-2">기본 촬영</h3>
+                    <p class="text-brand-400 text-3xl font-extrabold mb-6">120,000<span class="text-lg text-neutral-500 font-normal">원 / 1회</span></p>
+                    <ul class="space-y-4 mb-8 text-neutral-400 text-sm">
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 주말 중심 스케줄 진행</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 개인 컨셉 및 야외/스튜디오 스냅</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 정밀 보정본 제공</li>
+                    </ul>
+                </div>
+                <!-- Event Staff -->
+                <div class="bg-neutral-950 p-8 rounded-3xl border border-neutral-800">
+                    <h3 class="text-2xl font-bold text-white mb-2">특수 촬영 / 행사 스태프</h3>
+                    <p class="text-white text-3xl font-extrabold mb-6">상담 필요</p>
+                    <ul class="space-y-4 mb-8 text-neutral-400 text-sm">
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 퍼슈트 행사 공식 사진 스태프</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 대규모 그룹 촬영 기획</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 행사 성격 및 규모에 따른 견적 조율</li>
+                    </ul>
+                </div>
+                <!-- Event Support -->
+                <div class="bg-neutral-950 p-8 rounded-3xl border border-neutral-800">
+                    <h3 class="text-2xl font-bold text-white mb-2">행사 동행 (서포터 겸임)</h3>
+                    <p class="text-white text-3xl font-extrabold mb-6">150,000<span class="text-lg text-neutral-500 font-normal">원 / 1일</span></p>
+                    <ul class="space-y-4 mb-8 text-neutral-400 text-sm">
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 전담 사진사 역할 수행</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 짐 보관, 수분 보충 등 서포터 역할</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 행사 당일 스냅 기록</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Rights & Usage -->
+            <div id="rights" class="bg-neutral-950 p-8 md:p-12 rounded-3xl border border-neutral-800">
+                <h3 class="text-xl font-bold text-white mb-6"><i class="ri-shield-check-line text-brand-500 mr-2"></i> 권리 및 상업적 이용 안내</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                    <div>
+                        <h4 class="text-white font-medium mb-2 border-b border-neutral-800 pb-2">기본 허용 범위</h4>
+                        <p class="text-neutral-400 leading-relaxed">개인 SNS 업로드, 웹사이트(블로그 등) 게시, 개인 소장용 인화 목적으로는 자유롭게 사용 가능합니다.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium mb-2 border-b border-neutral-800 pb-2">상업적 이용 (별도 문의)</h4>
+                        <p class="text-neutral-400 leading-relaxed">사진을 활용한 굿즈 제작 및 판매, 혹은 저작권의 완전한 양도가 필요한 경우 별도의 옵션 비용이 발생합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Process Section -->
+    <section id="process" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Work Process</h2>
+            <p class="text-neutral-400">촬영부터 최종본 전달까지의 과정</p>
+        </div>
+        
+        <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4 relative">
+            <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-neutral-800 -z-10 -translate-y-1/2"></div>
+            
+            <!-- Step 1 -->
+            <div class="relative bg-neutral-950 border border-neutral-800 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-xl">
+                <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">1</div>
+                <h3 class="text-white font-bold mb-2">문의 및 상담</h3>
+                <p class="text-xs text-neutral-400">일정, 장소, 원하시는 분위기 간단 논의</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="relative bg-neutral-950 border border-neutral-800 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-xl">
+                <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">2</div>
+                <h3 class="text-white font-bold mb-2">일정 및 컨셉 조율</h3>
+                <p class="text-xs text-neutral-400">정확한 레퍼런스 확정 및 예약금 입금</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="relative bg-neutral-950 border border-brand-500/50 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+                <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">3</div>
+                <h3 class="text-white font-bold mb-2">촬영 진행</h3>
+                <p class="text-xs text-brand-300">약속된 장소에서 디테일한 촬영 진행</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="relative bg-neutral-950 border border-neutral-800 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-xl">
+                <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">4</div>
+                <h3 class="text-white font-bold mb-2">보정 작업</h3>
+                <p class="text-xs text-neutral-400">셀렉 완료 후 3~5주 내 정밀 보정</p>
+            </div>
+            <!-- Step 5 -->
+            <div class="relative bg-neutral-950 border border-neutral-800 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-xl">
+                <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">5</div>
+                <h3 class="text-white font-bold mb-2">최종본 전달</h3>
+                <p class="text-xs text-neutral-400">고해상도 데이터 파일 및 원본 전달</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-neutral-900 px-6 md:px-12 border-y border-neutral-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Portfolio Gallery</h2>
+                    <p class="text-neutral-400">그동안 작업했던 퍼슈트 스냅 결과물입니다.</p>
+                </div>
+            </div>
+
+            <!-- CSS Grid Gallery -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Image Item (Repeat 8 times for placeholder) -->
+                <div class="aspect-[3/4] overflow-hidden rounded-xl cursor-pointer group" onclick="openLightbox('https://images.unsplash.com/photo-1542451542907-6cf80ff362d6?auto=format&fit=crop&q=80&w=1200')">
+                    <img src="https://images.unsplash.com/photo-1542451542907-6cf80ff362d6?auto=format&fit=crop&q=80&w=600" alt="Fursuit Concept" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl cursor-pointer group" onclick="openLightbox('https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&q=80&w=1200')">
+                    <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&q=80&w=600" alt="Neon Fursuit" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
+                </div>
+                <div class="aspect-[4/5] overflow-hidden rounded-xl cursor-pointer group" onclick="openLightbox('https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?auto=format&fit=crop&q=80&w=1200')">
+                    <img src="https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?auto=format&fit=crop&q=80&w=600" alt="Outdoor Fursuit" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
+                </div>
+                <div class="aspect-[3/4] overflow-hidden rounded-xl cursor-pointer group" onclick="openLightbox('https://images.unsplash.com/photo-1520315342629-6ea920342047?auto=format&fit=crop&q=80&w=1200')">
+                    <img src="https://images.unsplash.com/photo-1520315342629-6ea920342047?auto=format&fit=crop&q=80&w=600" alt="Dark Vibe" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
+                </div>
+                <div class="aspect-[4/5] overflow-hidden rounded-xl cursor-pointer group lg:col-span-2 lg:row-span-2" onclick="openLightbox('https://images.unsplash.com/photo-1606811841689-23df1cece3e9?auto=format&fit=crop&q=80&w=1200')">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23df1cece3e9?auto=format&fit=crop&q=80&w=1000" alt="Wide Concept" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
+                </div>
+                <div class="aspect-[3/4] overflow-hidden rounded-xl cursor-pointer group" onclick="openLightbox('https://images.unsplash.com/photo-1542451542907-6cf80ff362d6?auto=format&fit=crop&q=80&w=1200')">
+                    <img src="https://images.unsplash.com/photo-1542451542907-6cf80ff362d6?auto=format&fit=crop&q=80&w=600" alt="Fursuit Concept" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
+                </div>
+                <div class="aspect-square overflow-hidden rounded-xl cursor-pointer group" onclick="openLightbox('https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?auto=format&fit=crop&q=80&w=1200')">
+                    <img src="https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?auto=format&fit=crop&q=80&w=600" alt="Outdoor Fursuit" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">FAQ</h2>
+            <p class="text-neutral-400">자주 묻는 질문들을 모았습니다.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl open:bg-neutral-950 transition-colors">
+                <summary class="flex justify-between items-center cursor-pointer p-6 text-white font-medium list-none">
+                    <span>야외/스튜디오 대관 비용은 어떻게 되나요?</span>
+                    <i class="ri-add-line transition-transform duration-300 group-open:rotate-45"></i>
+                </summary>
+                <div class="px-6 pb-6 text-sm text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 mt-2">
+                    촬영 장소 대관 및 야외 촬영지 입장료 등은 기본 촬영 비용에 포함되어 있지 않으며, 오너님께서 별도로 부담 및 예약을 진행해 주셔야 합니다. 원하시는 컨셉에 맞는 스튜디오 추천은 가능합니다.
+                </div>
+            </details>
+            <!-- FAQ Item 2 -->
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl open:bg-neutral-950 transition-colors">
+                <summary class="flex justify-between items-center cursor-pointer p-6 text-white font-medium list-none">
+                    <span>촬영 시 헬퍼(서포터) 동행이 필수인가요?</span>
+                    <i class="ri-add-line transition-transform duration-300 group-open:rotate-45"></i>
+                </summary>
+                <div class="px-6 pb-6 text-sm text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 mt-2">
+                    안전하고 원활한 촬영을 위해 퍼슈트 장착 및 이동을 도와주실 헬퍼 1인 이상의 동행을 강력히 권장합니다. 부득이하게 동행이 어려우신 경우 사전에 말씀해주시면 감사하겠습니다.
+                </div>
+            </details>
+            <!-- FAQ Item 3 -->
+            <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl open:bg-neutral-950 transition-colors">
+                <summary class="flex justify-between items-center cursor-pointer p-6 text-white font-medium list-none">
+                    <span>원본 사진도 제공되나요?</span>
+                    <i class="ri-add-line transition-transform duration-300 group-open:rotate-45"></i>
+                </summary>
+                <div class="px-6 pb-6 text-sm text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 mt-2">
+                    네, 보정본 전달 시 색상 및 노출 등이 1차적으로 정리된 원본(JPG)을 함께 제공해 드립니다. 단, 보정을 거치지 않은 순수 RAW 파일은 작업 프로세스상 제공하지 않고 있으니 양해 부탁드립니다.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="py-24 bg-gradient-to-t from-black to-neutral-950 px-6 border-t border-neutral-900">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 text-brand-500">
+                <i class="ri-mail-send-line"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Book?</h2>
+            <p class="text-neutral-400 mb-10 leading-relaxed text-sm md:text-base">
+                촬영 문의 및 예약은 아래 링크를 통해 편하게 연락주세요.<br>
+                확인 후 신속하게 답변해 드리겠습니다.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://open.kakao.com/me/zumk" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 bg-[#FEE500] hover:bg-[#F4DC00] text-black px-8 py-4 rounded-xl font-bold transition">
+                    <i class="ri-kakao-talk-fill text-xl"></i>
+                    <span>카카오톡 오픈채팅</span>
+                </a>
+                <a href="https://t.me/zhumook" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 bg-[#2AABEE] hover:bg-[#229ED9] text-white px-8 py-4 rounded-xl font-bold transition">
+                    <i class="ri-telegram-fill text-xl"></i>
+                    <span>Telegram (주묵)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-neutral-900 text-center">
+        <p class="text-neutral-500 text-sm">
+            © 2026 zumk.work. All rights reserved. <br class="md:hidden" /> Fursuit Photography Commission.
+        </p>
+    </footer>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex items-center justify-center opacity-0 cursor-zoom-out" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-brand-500 transition" onclick="closeLightbox()">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged Portfolio" class="max-w-full max-h-[90vh] object-contain px-4 rounded-md shadow-2xl">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Lightbox Functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
+            lightbox.classList.remove('hidden');
+            // Small delay to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                lightbox.style.opacity = '1';
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.style.opacity = '0';
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+            }, 300); // Matches transition duration
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+        
+        // Prevent click inside image from closing if needed, though clicking anywhere usually closes lightboxes
+        lightboxImg.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+</body>
+</html>

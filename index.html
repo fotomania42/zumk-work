@@ -33,6 +33,8 @@
 
     <style>
         /* Custom CSS */
+        html { font-size: 112.5%; }
+        @media (max-width: 640px) { html { font-size: 100%; } }
         body { font-family: 'Pretendard', sans-serif; }
         
         /* Hero Marquee Animation */
@@ -81,6 +83,7 @@
             <a href="#pricing" class="hover:text-white transition">Pricing</a>
             <a href="#process" class="hover:text-white transition">Process</a>
             <a href="#gallery" class="hover:text-white transition">Gallery</a>
+            <a href="#gear" class="hover:text-white transition">Gear</a>
             <a href="#faq" class="hover:text-white transition">FAQ</a>
         </div>
         <a href="#contact" class="hidden md:block bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-neutral-200 transition">예약 문의</a>
@@ -94,10 +97,11 @@
         <div class="relative z-20 text-center px-6 max-w-4xl mx-auto mt-20 mb-16">
             <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
                 당신의 퍼슈트를 <br class="hidden md:block" />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-400">가장 빛나는 순간</span>으로 기록해 드립니다.
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-400">가장 빛나는 순간</span>으로
+                <span class="whitespace-nowrap">기록해 드립니다.</span>
             </h1>
             <p class="text-lg md:text-xl text-neutral-400 mb-10">
-                캐릭터의 개성과 오너의 디테일한 요청을 담아내는 전문 사진 촬영 커미션
+                캐릭터의 개성과 오너의 요청을 담아내는 전문 사진 촬영 커미션
             </p>
             <a href="#gallery" class="inline-flex items-center space-x-2 text-white border border-neutral-700 bg-neutral-800/50 hover:bg-neutral-800 px-6 py-3 rounded-full transition backdrop-blur-sm">
                 <span>포트폴리오 보기</span>
@@ -131,8 +135,8 @@
     <!-- Features Section -->
     <section id="features" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Me?</h2>
-            <p class="text-neutral-400">퍼슈트 촬영에 특화된 전문성과 디테일</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">퍼슈트에 대한 높은 이해도로 담아내는 세심한 디테일</h2>
+            <p class="text-neutral-400">퍼슈트를 잘 아는 만큼, 작은 디테일도 놓치지 않아요</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl hover:border-neutral-700 transition">
@@ -147,13 +151,13 @@
                     <i class="ri-camera-lens-line"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">디테일한 컨셉 촬영</h3>
-                <p class="text-neutral-400 leading-relaxed text-sm">오너의 요청에 맞춘 맞춤형 디렉팅을 제공합니다. EOS R5, R7과 같은 하이엔드 장비의 렌즈 해상력과 코닥 400 특유의 아날로그 감성을 더해 트렌디한 결과물을 냅니다.</p>
+                <p class="text-neutral-400 leading-relaxed text-sm">오너의 요청, 또는 배경에 잘 어울어지는 자세한 디렉팅을 제공합니다.</p>
             </div>
             <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-2xl hover:border-neutral-700 transition">
                 <div class="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center text-brand-500 mb-6 text-2xl">
                     <i class="ri-timer-flash-line"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-3">신속하고 꼼꼼한 작업</h3>
+                <h3 class="text-xl font-bold text-white mb-3">신속하고 정확한 작업</h3>
                 <p class="text-neutral-400 leading-relaxed text-sm">촬영 후 빠른 프리뷰를 제공하며, 한 장 한 장 정밀한 색감 및 디테일 보정을 거쳐 평균 3주, 최대 5주 내에 완성본을 전달해 드립니다.</p>
             </div>
         </div>
@@ -163,14 +167,13 @@
     <section id="pricing" class="py-24 bg-neutral-900 px-6 md:px-12 border-y border-neutral-800">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Commission Pricing</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">커미션 가격 안내</h2>
                 <p class="text-neutral-400">투명하고 합리적인 비용 안내</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <!-- Basic -->
                 <div class="bg-neutral-950 p-8 rounded-3xl border border-neutral-800 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-500"></div>
                     <h3 class="text-2xl font-bold text-white mb-2">기본 촬영</h3>
                     <p class="text-brand-400 text-3xl font-extrabold mb-6">120,000<span class="text-lg text-neutral-500 font-normal">원 / 1회</span></p>
                     <ul class="space-y-4 mb-8 text-neutral-400 text-sm">
@@ -179,24 +182,24 @@
                         <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 정밀 보정본 제공</li>
                     </ul>
                 </div>
-                <!-- Event Staff -->
-                <div class="bg-neutral-950 p-8 rounded-3xl border border-neutral-800">
-                    <h3 class="text-2xl font-bold text-white mb-2">특수 촬영 / 행사 스태프</h3>
-                    <p class="text-white text-3xl font-extrabold mb-6">상담 필요</p>
-                    <ul class="space-y-4 mb-8 text-neutral-400 text-sm">
-                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 퍼슈트 행사 공식 사진 스태프</li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 대규모 그룹 촬영 기획</li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 행사 성격 및 규모에 따른 견적 조율</li>
-                    </ul>
-                </div>
                 <!-- Event Support -->
                 <div class="bg-neutral-950 p-8 rounded-3xl border border-neutral-800">
                     <h3 class="text-2xl font-bold text-white mb-2">행사 동행 (서포터 겸임)</h3>
                     <p class="text-white text-3xl font-extrabold mb-6">150,000<span class="text-lg text-neutral-500 font-normal">원 / 1일</span></p>
                     <ul class="space-y-4 mb-8 text-neutral-400 text-sm">
-                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 전담 사진사 역할 수행</li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 짐 보관, 수분 보충 등 서포터 역할</li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 행사 당일 스냅 기록</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 전담 사진사/서포터 역할 수행</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 차량 짐 보관, 명함 배포 등 서포터 역할</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 행사 당일 현장 분위기를 담은 스냅 촬영</li>
+                    </ul>
+                </div>
+                <!-- Event Staff -->
+                <div class="bg-neutral-950 p-8 rounded-3xl border border-neutral-800">
+                    <h3 class="text-2xl font-bold text-white mb-2">특수 촬영 / 행사 스태프</h3>
+                    <p class="text-white text-3xl font-extrabold mb-6">상담 필요</p>
+                    <ul class="space-y-4 mb-8 text-neutral-400 text-sm">
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 퍼슈트 행사 공식 사진 스태프 진행</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 대규모 촬영회 기획 요청</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-500 mr-2 text-lg"></i> 행사 성격 및 규모에 따른 견적 조율</li>
                     </ul>
                 </div>
             </div>
@@ -207,11 +210,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                     <div>
                         <h4 class="text-white font-medium mb-2 border-b border-neutral-800 pb-2">기본 허용 범위</h4>
-                        <p class="text-neutral-400 leading-relaxed">개인 SNS 업로드, 웹사이트(블로그 등) 게시, 개인 소장용 인화 목적으로는 자유롭게 사용 가능합니다.</p>
+                        <p class="text-neutral-400 leading-relaxed">개인 SNS 업로드, 웹사이트(블로그 등) 게시, 개인 소장용 인화, 주변 무료 배포 목적으로는 자유롭게 사용 가능합니다.</p>
                     </div>
                     <div>
                         <h4 class="text-white font-medium mb-2 border-b border-neutral-800 pb-2">상업적 이용 (별도 문의)</h4>
-                        <p class="text-neutral-400 leading-relaxed">사진을 활용한 굿즈 제작 및 판매, 혹은 저작권의 완전한 양도가 필요한 경우 별도의 옵션 비용이 발생합니다.</p>
+                        <p class="text-neutral-400 leading-relaxed">사진을 활용한 굿즈 제작 및 판매, 혹은 저작권의 완전한 양도가 필요한 경우 별도의 추가 비용이 발생합니다.</p>
                     </div>
                 </div>
             </div>
@@ -221,8 +224,8 @@
     <!-- Work Process Section -->
     <section id="process" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Work Process</h2>
-            <p class="text-neutral-400">촬영부터 최종본 전달까지의 과정</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">작업 진행 과정</h2>
+            <p class="text-neutral-400">촬영부터 최종 사진 전달까지의 과정</p>
         </div>
         
         <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4 relative">
@@ -232,19 +235,19 @@
             <div class="relative bg-neutral-950 border border-neutral-800 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-xl">
                 <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">1</div>
                 <h3 class="text-white font-bold mb-2">문의 및 상담</h3>
-                <p class="text-xs text-neutral-400">일정, 장소, 원하시는 분위기 간단 논의</p>
+                <p class="text-xs text-neutral-400">일정, 장소, 분위기 간단 논의</p>
             </div>
             <!-- Step 2 -->
             <div class="relative bg-neutral-950 border border-neutral-800 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-xl">
                 <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">2</div>
                 <h3 class="text-white font-bold mb-2">일정 및 컨셉 조율</h3>
-                <p class="text-xs text-neutral-400">정확한 레퍼런스 확정 및 예약금 입금</p>
+                <p class="text-xs text-neutral-400">일정, 장소 확정 및 네이버 페이 결제</p>
             </div>
             <!-- Step 3 -->
             <div class="relative bg-neutral-950 border border-brand-500/50 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-[0_0_15px_rgba(139,92,246,0.1)]">
                 <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-neutral-950">3</div>
                 <h3 class="text-white font-bold mb-2">촬영 진행</h3>
-                <p class="text-xs text-brand-300">약속된 장소에서 디테일한 촬영 진행</p>
+                <p class="text-xs text-brand-300">현장에서 디테일한 촬영 진행</p>
             </div>
             <!-- Step 4 -->
             <div class="relative bg-neutral-950 border border-neutral-800 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-xl">
@@ -266,8 +269,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-end mb-12">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Portfolio Gallery</h2>
-                    <p class="text-neutral-400">그동안 작업했던 퍼슈트 스냅 결과물입니다.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">zumk work</h2>
                 </div>
             </div>
 
@@ -299,6 +301,75 @@
         </div>
     </section>
 
+    <!-- Gear Section -->
+    <section id="gear" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-neutral-900">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">장비 목록</h2>
+            <p class="text-neutral-400">실내 스튜디오부터 야외 행사까지, 다양한 환경에 맞춰 사용하는 장비 구성입니다.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col hoㅂver:border-neutral-700 transition">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-neutral-800 rounded-xl flex items-center justify-center text-brand-500 text-xl">
+                        <i class="ri-camera-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white tracking-wide">Camera</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Canon</strong> EOS R5</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Canon</strong> EOS R7</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-400 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Leica</strong> D-LUX 8</span></li>
+                </ul>
+            </div>
+
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col hover:border-neutral-700 transition">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-neutral-800 rounded-xl flex items-center justify-center text-brand-500 text-xl">
+                        <i class="ri-camera-lens-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white tracking-wide">Lens</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">SIGMA</strong> A 18-35mm F1.8 DC HSM</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">SIGMA</strong> S 70-200mm F2.8 DG OS HSM</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Canon</strong> EF-S 17-55mm F2.8 IS USM</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Tamron</strong> SP 35mm F1.4 Di USD F045</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Tamron</strong> SP 45mm F1.8 Di VC USD F013</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Tamron</strong> SP 85mm F1.8 Di VC USD F016</span></li>
+                </ul>
+            </div>
+
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col hover:border-neutral-700 transition">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-neutral-800 rounded-xl flex items-center justify-center text-brand-500 text-xl">
+                        <i class="ri-flashlight-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white tracking-wide">Lighting</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">GODOX</strong> ML100Bi</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">GODOX</strong> ML100R</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">GODOX</strong> V860III</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">GODOX</strong> V860II <span class="text-xs text-brand-400 font-semibold ml-1">× 2</span></span></li>
+                </ul>
+            </div>
+
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col hover:border-neutral-700 transition">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-neutral-800 rounded-xl flex items-center justify-center text-brand-500 text-xl">
+                        <i class="ri-printer-line"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white tracking-wide">Printing</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-200">Canon</strong> SELPHY CP1500</span></li>
+                </ul>
+                <p class="text-[11px] text-neutral-500 mt-6 leading-relaxed border-t border-neutral-800/60 pt-3">행사 동행 및 특정 촬영 세션 시 고화질 현장 사진 인화 대응이 가능합니다.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section id="faq" class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
         <div class="text-center mb-16">
@@ -314,17 +385,17 @@
                     <i class="ri-add-line transition-transform duration-300 group-open:rotate-45"></i>
                 </summary>
                 <div class="px-6 pb-6 text-sm text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 mt-2">
-                    촬영 장소 대관 및 야외 촬영지 입장료 등은 기본 촬영 비용에 포함되어 있지 않으며, 오너님께서 별도로 부담 및 예약을 진행해 주셔야 합니다. 원하시는 컨셉에 맞는 스튜디오 추천은 가능합니다.
+                    촬영 장소 대관 및 야외 촬영지 입장료 등은 기본 촬영 비용에 포함되어 있지 않으며, 오너님께서 별도로 부담 및 예약을 진행해 주셔야 합니다.
                 </div>
             </details>
             <!-- FAQ Item 2 -->
             <details class="group bg-neutral-900 border border-neutral-800 rounded-2xl open:bg-neutral-950 transition-colors">
                 <summary class="flex justify-between items-center cursor-pointer p-6 text-white font-medium list-none">
-                    <span>촬영 시 헬퍼(서포터) 동행이 필수인가요?</span>
+                    <span>촬영 시 서포터 동행이 필수인가요?</span>
                     <i class="ri-add-line transition-transform duration-300 group-open:rotate-45"></i>
                 </summary>
                 <div class="px-6 pb-6 text-sm text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 mt-2">
-                    안전하고 원활한 촬영을 위해 퍼슈트 장착 및 이동을 도와주실 헬퍼 1인 이상의 동행을 강력히 권장합니다. 부득이하게 동행이 어려우신 경우 사전에 말씀해주시면 감사하겠습니다.
+                    사람이 많고 혼잡한 장소에서의 야외촬영이라면 권장드리나 필수는 아닙니다.
                 </div>
             </details>
             <!-- FAQ Item 3 -->
@@ -334,8 +405,7 @@
                     <i class="ri-add-line transition-transform duration-300 group-open:rotate-45"></i>
                 </summary>
                 <div class="px-6 pb-6 text-sm text-neutral-400 leading-relaxed border-t border-neutral-800 pt-4 mt-2">
-                    네, 보정본 전달 시 색상 및 노출 등이 1차적으로 정리된 원본(JPG)을 함께 제공해 드립니다. 단, 보정을 거치지 않은 순수 RAW 파일은 작업 프로세스상 제공하지 않고 있으니 양해 부탁드립니다.
-                </div>
+                    셀렉용 원본 파일은 필요하신 경우 제공해 드리지만, 어디까지나 선택을 위한 용도로만 사용해 주세요. 촬영본의 RAW 파일은 기본적으로 제공되지 않습니다. RAW 파일 소장을 원하실 경우, 저작권 및 상업적 이용 권리가 포함된 별도의 추가 옵션 비용이 발생합니다.
             </details>
         </div>
     </section>
@@ -346,7 +416,7 @@
             <div class="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 text-brand-500">
                 <i class="ri-mail-send-line"></i>
             </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Book?</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">빛나는 모습을 남길 준비가 되셨나요?</h2>
             <p class="text-neutral-400 mb-10 leading-relaxed text-sm md:text-base">
                 촬영 문의 및 예약은 아래 링크를 통해 편하게 연락주세요.<br>
                 확인 후 신속하게 답변해 드리겠습니다.
@@ -359,7 +429,7 @@
                 </a>
                 <a href="https://t.me/zhumook" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 bg-[#2AABEE] hover:bg-[#229ED9] text-white px-8 py-4 rounded-xl font-bold transition">
                     <i class="ri-telegram-fill text-xl"></i>
-                    <span>Telegram (주묵)</span>
+                    <span>Telegram</span>
                 </a>
             </div>
         </div>
@@ -368,7 +438,7 @@
     <!-- Footer -->
     <footer class="bg-black py-8 border-t border-neutral-900 text-center">
         <p class="text-neutral-500 text-sm">
-            © 2026 zumk.work. All rights reserved. <br class="md:hidden" /> Fursuit Photography Commission.
+            © 2026 zumk.work. All rights reserved. <br class="md:hidden" />
         </p>
     </footer>
 

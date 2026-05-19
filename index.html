@@ -308,7 +308,7 @@
                 </div>
             </div>
 
-            <div class="columns-2 md:columns-3 lg:columns-4 gap-4">
+            <div id="gallery-grid" class="columns-2 md:columns-3 lg:columns-4 gap-4">
                 <div class="break-inside-avoid mb-4 overflow-hidden rounded-xl cursor-pointer group" onclick="openLightbox('images/hero1.webp')">
                     <img src="images/hero1.webp" alt="Portfolio" class="w-full h-auto object-cover transition duration-500 group-hover:scale-110 group-hover:opacity-80">
                 </div>
@@ -585,6 +585,19 @@
         // Prevent click inside image from closing if needed, though clicking anywhere usually closes lightboxes
         lightboxImg.addEventListener('click', (e) => {
             e.stopPropagation();
+        });
+
+        // 갤러리 이미지 랜덤 셔플 (Fisher-Yates Algorithm)
+        document.addEventListener("DOMContentLoaded", () => {
+            const galleryGrid = document.getElementById('gallery-grid');
+            if (galleryGrid) {
+                const items = Array.from(galleryGrid.children);
+                for (let i = items.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [items[i], items[j]] = [items[j], items[i]];
+                }
+                items.forEach(item => galleryGrid.appendChild(item));
+            }
         });
     </script>
 </body>

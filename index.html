@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="scroll-smooth dark">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,10 +31,11 @@
 
     <!-- FOUC(깜빡임) 방지를 위한 테마 즉시 적용 스크립트 -->
     <script>
-        if (localStorage.getItem('theme') === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-            document.documentElement.classList.remove('dark');
-        } else {
+        // 첫 접속 시 기본값을 라이트 모드로 설정하기 위해 localStorage 값이 'dark'일 때만 dark 클래스 추가
+        if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
     </script>
 
@@ -166,7 +167,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-transform duration-300">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white/50 dark:border-neutral-700/30">
+                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30">
                     <i class="ri-user-smile-line"></i>
                 </div>
                 <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">퍼슈트 전문 스냅</h3>
@@ -174,7 +175,7 @@
             </div>
             
             <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-transform duration-300">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white/50 dark:border-neutral-700/30">
+                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30">
                     <i class="ri-camera-lens-line"></i>
                 </div>
                 <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">디테일한 촬영</h3>
@@ -182,7 +183,7 @@
             </div>
             
             <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-transform duration-300">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white/50 dark:border-neutral-700/30">
+                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30">
                     <i class="ri-timer-flash-line"></i>
                 </div>
                 <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">신속하고 정확한 작업</h3>
@@ -206,7 +207,7 @@
                     <p class="text-brand-600 dark:text-brand-400 text-3xl font-extrabold mb-6">120,000<span class="text-lg text-neutral-500 font-normal">원 / 1회</span></p>
                     <ul class="space-y-4 mb-8 text-neutral-700 dark:text-neutral-300 text-sm">
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 주말 중심 스케줄 진행</li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 개인 컨셉 및 야외/스튜디오 스냅</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 개인 및 소규모 야외/스튜디오 촬영</li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 정밀 보정본 제공</li>
                     </ul>
                 </div>
@@ -226,7 +227,7 @@
                     <p class="text-neutral-900 dark:text-white text-3xl font-extrabold mb-6">상담 필요</p>
                     <ul class="space-y-4 mb-8 text-neutral-700 dark:text-neutral-300 text-sm">
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 퍼슈트 행사 공식 사진 스태프 진행</li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 대규모 촬영회 기획 요청</li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 대규모 촬영회 기획 및 촬영</li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg"></i> 행사 성격 및 규모에 따른 견적 조율</li>
                     </ul>
                 </div>
@@ -292,8 +293,8 @@
             <!-- Step 2 -->
             <div class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
                 <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">2</div>
-                <h3 class="text-neutral-900 dark:text-white font-bold mb-2">일정 및 컨셉 조율</h3>
-                <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">일정, 장소 확정 및 네이버 페이 결제</p>
+                <h3 class="text-neutral-900 dark:text-white font-bold mb-2">일정 장소 조율</h3>
+                <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">일정, 장소 확정 및 결제 진행</p>
             </div>
             <!-- Step 3 -->
             <div class="relative bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-brand-400/50 dark:border-brand-500/50 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-[0_0_20px_rgba(139,92,246,0.15)]">
@@ -305,23 +306,23 @@
             <div class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
                 <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">4</div>
                 <h3 class="text-neutral-900 dark:text-white font-bold mb-2">보정 작업</h3>
-                <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">셀렉 완료 후 3~5주 내 정밀 보정</p>
+                <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">촬영 완료 후 3~5주 보정 진행</p>
             </div>
             <!-- Step 5 -->
             <div class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
                 <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">5</div>
                 <h3 class="text-neutral-900 dark:text-white font-bold mb-2">최종본 전달</h3>
-                <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">고해상도 데이터 파일 및 원본 전달</p>
+                <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">고해상도 보정본 전달</p>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section (원본과 동일한 29개 이미지 유지) -->
+    <!-- Gallery Section -->
     <section id="gallery" class="py-24 px-6 md:px-12">
         <div class="max-w-7xl mx-auto bg-white/30 dark:bg-neutral-900/30 backdrop-blur-3xl p-6 md:p-10 rounded-[3rem] border border-white/50 dark:border-neutral-700/30 shadow-2xl">
             <div class="flex justify-between items-end mb-12">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-2">zumk work</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tighter text-neutral-900 dark:text-white mb-2">zumk.work</h2>
                     <p class="text-neutral-600 dark:text-neutral-400 break-keep">(클릭 시 확대)</p>
                 </div>
             </div>
@@ -426,9 +427,10 @@
             <p class="text-neutral-600 dark:text-neutral-400">실내 스튜디오부터 야외 행사까지, 다양한 환경에 맞춰 사용하는 장비 구성입니다.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
             
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
+            <!-- Camera Card -->
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform duration-300">
                 <div class="flex items-center space-x-3 mb-6">
                     <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50">
                         <i class="ri-camera-line"></i>
@@ -442,7 +444,8 @@
                 </ul>
             </div>
 
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
+            <!-- Lens Card -->
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform duration-300">
                 <div class="flex items-center space-x-3 mb-6">
                     <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50">
                         <i class="ri-camera-lens-line"></i>
@@ -450,14 +453,17 @@
                     <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Lens</h3>
                 </div>
                 <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
-                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">SIGMA</strong> A 18-35mm F1.8</span></li>
-                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">SIGMA</strong> S 70-200mm F2.8</span></li>
-                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Canon</strong> EF-S 17-55mm F2.8</span></li>
-                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 35mm F1.4</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">SIGMA</strong> A 18-35mm F1.8 DC HSM</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">SIGMA</strong> S 70-200mm F2.8 DG OS HSM</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Canon</strong> EF-S 17-55mm F2.8 IS USM</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 35mm F1.4 Di USD F045</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 45mm F1.8 Di VC USD F013</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 85mm F1.8 Di VC USD F016</span></li>
                 </ul>
             </div>
 
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
+            <!-- Lighting Card -->
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform duration-300">
                 <div class="flex items-center space-x-3 mb-6">
                     <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50">
                         <i class="ri-flashlight-line"></i>
@@ -468,10 +474,12 @@
                     <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> ML100Bi</span></li>
                     <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> ML100R</span></li>
                     <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> V860III</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> V860II <span class="text-xs text-brand-600 dark:text-brand-400 font-semibold ml-1">× 2</span></span></li>
                 </ul>
             </div>
 
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform">
+            <!-- Printing Card -->
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg hover:-translate-y-1 transition-transform duration-300">
                 <div class="flex items-center space-x-3 mb-6">
                     <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50">
                         <i class="ri-printer-line"></i>
@@ -481,12 +489,12 @@
                 <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
                     <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Canon</strong> SELPHY CP1500</span></li>
                 </ul>
-                <p class="text-[11px] text-neutral-500 mt-6 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/60 pt-3">행사 동행 시 고화질 현장 사진 인화 대응 가능</p>
+                <p class="text-[11px] text-neutral-500 mt-6 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/60 pt-3">행사 동행 및 특정 촬영 세션 시 고화질 현장 사진 인화 대응이 가능합니다.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section (닫는 details 태그 누락 수정됨) -->
+    <!-- FAQ Section -->
     <section id="faq" class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">FAQ</h2>

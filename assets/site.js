@@ -7,25 +7,16 @@
 
     var T = {
         ko: {
-            loading: '예약 현황 확인 중',
-            openShort: '예약 가능', closedShort: '예약 마감',
-            openLong: '지금 예약을 받고 있어요',
-            closedLong: function (m, n) { return m + '월 예약 마감 · ' + n + '월 1일부터 다시 받아요'; },
             photo: function (i) { return '퍼슈트 촬영 사진 ' + i; },
             viewer: '사진 크게 보기', close: '닫기', prev: '이전 사진', next: '다음 사진',
             menuOpen: '메뉴 열기', menuClose: '메뉴 닫기'
         },
         en: {
-            loading: 'Checking availability',
-            openShort: 'Booking open', closedShort: 'Fully booked',
-            openLong: 'Now taking bookings',
-            closedLong: function (m, n) { return 'Fully booked for ' + MONTHS[m - 1] + ' · Reopens ' + MONTHS[n - 1] + ' 1'; },
             photo: function (i) { return 'Fursuit photo ' + i; },
             viewer: 'Photo viewer', close: 'Close', prev: 'Previous photo', next: 'Next photo',
             menuOpen: 'Open menu', menuClose: 'Close menu'
         }
     };
-    var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var t = T[lang];
 
     /* ---------- 테마 토글 ---------- */
@@ -62,57 +53,6 @@
         menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menuOpen) setMenu(false); });
         window.addEventListener('resize', function () { if (window.innerWidth >= 1280 && menuOpen) setMenu(false); });
-    }
-
-    /* ---------- 예약 현황 ----------
-       Firestore 문서 site/booking = { status: 'open' | 'closed', month: 'YYYY-MM' }
-       'closed'는 저장된 달(한국 시간 기준)에만 유효 → 다음 달이 되면 자동으로 '예약 가능' */
-    function kstMonth() {
-        var parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit' }).formatToParts(new Date());
-        var y = +parts.find(function (p) { return p.type === 'year'; }).value;
-        var m = +parts.find(function (p) { return p.type === 'month'; }).value;
-        return { y: y, m: m, key: y + '-' + (m < 10 ? '0' + m : m), next: m === 12 ? 1 : m + 1 };
-    }
-    function resolveBooking(data) {
-        var now = kstMonth();
-        var closed = !!(data && data.status === 'closed' && data.month === now.key);
-        return { closed: closed, month: now.m, next: now.next, key: now.key };
-    }
-    Z.kstMonth = kstMonth;
-    Z.resolveBooking = resolveBooking;
-
-    function renderBadge(el, state, info) {
-        var long = el.getAttribute('data-booking-status') === 'long';
-        var text;
-        if (state === 'loading') text = t.loading;
-        else if (state === 'closed') text = long ? t.closedLong(info.month, info.next) : t.closedShort;
-        else text = long ? t.openLong : t.openShort;
-        el.setAttribute('data-state', state);
-        el.innerHTML = '<span class="status-dot" aria-hidden="true"></span><span></span>';
-        el.lastChild.textContent = text;
-    }
-
-    var badges = document.querySelectorAll('[data-booking-status]');
-    if (badges.length) {
-        badges.forEach(function (el) { el.setAttribute('role', 'status'); renderBadge(el, 'loading'); });
-        var fb = Z.firebase || {};
-        var done = function (data) {
-            var info = resolveBooking(data);
-            badges.forEach(function (el) { renderBadge(el, info.closed ? 'closed' : 'open', info); });
-        };
-        if (!fb.projectId) {
-            done(null);
-        } else {
-            var url = 'https://firestore.googleapis.com/v1/projects/' + encodeURIComponent(fb.projectId) +
-                '/databases/(default)/documents/site/booking' + (fb.apiKey ? '?key=' + encodeURIComponent(fb.apiKey) : '');
-            fetch(url).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
-                var f = (j && j.fields) || {};
-                done({
-                    status: f.status && f.status.stringValue,
-                    month: f.month && f.month.stringValue
-                });
-            }).catch(function () { done(null); });
-        }
     }
 
     /* ---------- 히어로 무한 스크롤 ---------- */

@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zumk.work | Fursuit Photographer in Seoul, Korea</title>
-    <meta name="description" content="Fursuit photographer based in the Seoul area since 2019. Visiting Korea with your fursuit? Book a photoshoot or a con companion day. PayPal accepted.">
+    <title>zumk.work | Fursuit Photography Commissions</title>
+    <meta name="description" content="Fursuit photography commissions. Documenting fursuit meetups and events in Seoul, Gyeonggi and Incheon since 2019. 3–4 edited A-cuts on the day, full edited set in about a month. PayPal accepted.">
     <link rel="canonical" href="https://www.zumk.work/en.html">
     <link rel="alternate" hreflang="ko" href="https://www.zumk.work/">
     <link rel="alternate" hreflang="en" href="https://www.zumk.work/en.html">
+
+    <!-- Link preview (KakaoTalk · X · Telegram) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="zumk.work">
-    <meta property="og:title" content="zumk.work | Fursuit Photographer in Seoul, Korea">
-    <meta property="og:description" content="Visiting Korea with your fursuit? Capturing your fursuit at its brightest moment.">
+    <meta property="og:title" content="zumk.work | Fursuit Photography Commissions">
+    <meta property="og:description" content="Capturing your fursuit at its brightest moment.">
     <meta property="og:image" content="https://www.zumk.work/images/hero1.webp">
     <meta property="og:url" content="https://www.zumk.work/en.html">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@zumk_work">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "zumk.work",
+        "description": "Fursuit photography commissions",
+        "url": "https://www.zumk.work/en.html",
+        "image": "https://www.zumk.work/images/hero1.webp",
+        "areaServed": "Seoul, Gyeonggi, Incheon",
+        "foundingDate": "2019",
+        "sameAs": ["https://x.com/zumk_work"]
+    }
+    </script>
 
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -30,17 +46,18 @@
     <div class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand-500/20 dark:bg-brand-500/10 blur-[100px] pointer-events-none -z-10"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-blue-500/20 dark:bg-blue-500/10 blur-[100px] pointer-events-none -z-10"></div>
 
+    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 top-0 py-4 px-6 md:px-12 flex justify-between items-center text-neutral-900 dark:text-white">
         <a href="#top" class="text-2xl font-bold tracking-tighter">zumk.work</a>
         <div class="hidden xl:flex space-x-7 text-sm font-medium text-neutral-600 dark:text-neutral-400">
-            <a href="#visiting" class="hover:text-brand-600 dark:hover:text-white transition">Visiting Korea</a>
+            <a href="#features" class="hover:text-brand-600 dark:hover:text-white transition">About</a>
             <a href="#pricing" class="hover:text-brand-600 dark:hover:text-white transition">Pricing</a>
-            <a href="#how" class="hover:text-brand-600 dark:hover:text-white transition">How it works</a>
+            <a href="#process" class="hover:text-brand-600 dark:hover:text-white transition">How it works</a>
             <a href="#gallery" class="hover:text-brand-600 dark:hover:text-white transition">Portfolio</a>
+            <a href="#gear" class="hover:text-brand-600 dark:hover:text-white transition">Gear</a>
             <a href="#faq" class="hover:text-brand-600 dark:hover:text-white transition">FAQ</a>
         </div>
         <div class="flex items-center gap-2 md:gap-3">
-            <span data-booking-status="short" class="hidden md:inline-flex status-badge text-xs font-semibold px-3 py-1.5 rounded-full bg-white/60 dark:bg-neutral-800/60 border border-white/70 dark:border-neutral-700/50 text-neutral-700 dark:text-neutral-300"></span>
             <a href="index.html" lang="ko" hreflang="ko" class="text-sm font-bold px-3 py-2 rounded-full hover:bg-white/60 dark:hover:bg-neutral-800/60 transition" aria-label="한국어">KO</a>
             <a href="#contact" class="bg-neutral-900 text-white dark:bg-white dark:text-black px-4 md:px-5 py-2 rounded-full text-sm font-bold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition shadow-lg">Book</a>
             <button id="menu-toggle" type="button" class="xl:hidden w-10 h-10 -mr-2 rounded-full flex items-center justify-center hover:bg-white/60 dark:hover:bg-neutral-800/60 transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -49,13 +66,13 @@
         </div>
         <div id="mobile-menu" class="hidden xl:hidden absolute top-full left-0 right-0 px-6 pb-6 pt-2 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl border-b border-white/60 dark:border-neutral-800 shadow-lg">
             <div class="flex flex-col font-medium text-neutral-800 dark:text-neutral-200">
-                <a href="#visiting" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">Visiting Korea</a>
+                <a href="#features" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">About</a>
                 <a href="#pricing" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">Pricing</a>
-                <a href="#how" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">How it works</a>
+                <a href="#process" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">How it works</a>
                 <a href="#gallery" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">Portfolio</a>
+                <a href="#gear" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">Gear</a>
                 <a href="#faq" class="py-3">FAQ</a>
             </div>
-            <span data-booking-status="long" class="status-badge mt-3 text-sm text-neutral-600 dark:text-neutral-400"></span>
         </div>
     </nav>
 
@@ -67,56 +84,58 @@
     <!-- Hero -->
     <header id="top" class="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20">
         <div class="absolute inset-0 bg-gradient-to-b from-slate-50/40 via-slate-50/60 to-slate-50 dark:from-neutral-950/40 dark:via-neutral-950/60 dark:to-neutral-950 z-10 pointer-events-none transition-colors duration-300"></div>
+
         <div class="relative z-20 text-center px-6 max-w-4xl mx-auto mt-16 mb-14">
-            <span data-booking-status="long" class="status-badge mb-6 text-sm font-semibold px-4 py-2 rounded-full bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/50 text-neutral-700 dark:text-neutral-300 shadow-sm"></span>
             <h1 class="text-4xl md:text-6xl font-extrabold text-neutral-900 dark:text-white leading-tight mb-6 tracking-tight">
                 Capturing your fursuit at its <span class="text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285f4,#a142f4,#ea4335,#fbbc04)] dark:bg-[linear-gradient(to_right,#669df6,#b872f9,#f26c61,#fcc936)]">brightest moment</span>.
             </h1>
-            <p class="text-neutral-600 dark:text-neutral-400 text-base md:text-lg mb-9 max-w-2xl mx-auto">
-                Fursuit photographer in the Seoul area since 2019. Bringing your suit to Korea? Let's turn your trip into a shoot to remember.
-            </p>
             <div class="flex flex-col sm:flex-row justify-center gap-3">
                 <a href="#gallery" class="inline-flex items-center justify-center space-x-2 text-neutral-800 dark:text-white border border-white/50 dark:border-neutral-700/50 bg-white/50 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-800 px-6 py-3 rounded-full transition backdrop-blur-md shadow-lg">
                     <span>See portfolio</span><i class="ri-arrow-down-line"></i>
                 </a>
-                <a href="#contact" class="inline-flex items-center justify-center bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition shadow-lg font-semibold">Plan a shoot</a>
+                <a href="#pricing" class="inline-flex items-center justify-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition shadow-lg font-semibold">
+                    <span>View pricing</span>
+                </a>
             </div>
         </div>
+
         <div class="marquee-wrap relative z-20 mt-auto pb-10 w-full overflow-hidden">
             <div id="marquee" class="marquee-track px-4"></div>
         </div>
     </header>
 
-    <!-- Visiting Korea -->
-    <section id="visiting" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+    <!-- About -->
+    <section id="features" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">Visiting Korea with your fursuit?</h2>
-            <p class="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">You bring the suit. I'll handle the camera, the spots and the suiter care.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">Careful detail from a photographer who knows fursuits</h2>
+            <p class="text-neutral-600 dark:text-neutral-400">Because I know fursuits well, I don't miss the small details.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-map-pin-2-line"></i></div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">Local spots, sorted</h3>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">Most fursuit shoots in Korea happen around Seoul, Gyeonggi and Incheon. Tell me about your character and your schedule, and I'll suggest locations that fit both.</p>
+            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
+                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-user-smile-line"></i></div>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">Fursuit specialist</h3>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">I know fursuits and suiters well, so every shoot happens while you're comfortable and safe.</p>
             </div>
-            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-heart-pulse-line"></i></div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">Suiter care included</h3>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">Korean summers are hot and humid. Breaks come first whenever you need them, and I look after the basics so you don't need to bring a handler to a quiet location.</p>
+            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
+                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-camera-lens-line"></i></div>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">Detail-focused shooting</h3>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">I find the moments when your character looks its best and capture photos that blend naturally with the background.</p>
             </div>
-            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-eye-off-line"></i></div>
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">No head-off photos. Ever.</h3>
-                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">The camera goes down whenever your head comes off. Your character stays your character.</p>
+            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
+                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-timer-flash-line"></i></div>
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">Same-day A-cuts, carefully edited full set</h3>
+                <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm">Right after the shoot, you get 3–4 A-cuts ready to post on social media. Every other photo is carefully edited too.</p>
             </div>
         </div>
+
+        <!-- Background -->
         <div class="mt-10 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 rounded-3xl p-6 md:p-8 shadow-lg flex flex-col lg:flex-row lg:items-center gap-6">
             <ul class="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-                <li class="flex items-start gap-3"><i class="ri-calendar-check-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span><strong class="block text-neutral-900 dark:text-white">Shooting since 2019</strong><span class="text-neutral-600 dark:text-neutral-400">Meetups, events and studio sessions</span></span></li>
+                <li class="flex items-start gap-3"><i class="ri-calendar-check-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span><strong class="block text-neutral-900 dark:text-white">Shooting since 2019</strong><span class="text-neutral-600 dark:text-neutral-400">Documenting fursuit meetups and events</span></span></li>
                 <li class="flex items-start gap-3"><i class="ri-award-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span><strong class="block text-neutral-900 dark:text-white">K-FUR official photo staff</strong><span class="text-neutral-600 dark:text-neutral-400">FUR STAGE, LevyBucks</span></span></li>
-                <li class="flex items-start gap-3"><i class="ri-camera-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span><strong class="block text-neutral-900 dark:text-white">Pro gear</strong><span class="text-neutral-600 dark:text-neutral-400">Canon EOS R5 and R7, studio lighting, on-site printing</span></span></li>
+                <li class="flex items-start gap-3"><i class="ri-map-pin-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span><strong class="block text-neutral-900 dark:text-white">Seoul metropolitan area</strong><span class="text-neutral-600 dark:text-neutral-400">Locations in Seoul, Gyeonggi and Incheon</span></span></li>
             </ul>
-            <a href="https://x.com/zumk_work" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-neutral-900 text-white dark:bg-white dark:text-black px-5 py-3 rounded-2xl text-sm font-bold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition shrink-0">
+            <a href="https://x.com/zumk_work/reposts" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-neutral-900 text-white dark:bg-white dark:text-black px-5 py-3 rounded-2xl text-sm font-bold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition shrink-0">
                 <i class="ri-twitter-x-line"></i><span>Recent work on X</span>
             </a>
         </div>
@@ -126,90 +145,130 @@
     <section id="pricing" class="py-24 px-6 md:px-12">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">Pricing</h2>
-                <p class="text-neutral-600 dark:text-neutral-400">Prices in Korean won (KRW), for the Seoul metropolitan area</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">Commission pricing</h2>
+                <p class="text-neutral-600 dark:text-neutral-400">All prices are in Korean won (KRW).</p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                <div class="flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl">
+                <div class="flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
                     <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">Photoshoot</h3>
-                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">One meetup or session</p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">One fursuit meetup session, mostly on weekends</p>
                     <p class="text-3xl font-extrabold text-neutral-900 dark:text-white mb-6">₩150,000<span class="text-lg text-neutral-500 font-normal"> / session</span></p>
-                    <ul class="space-y-3 text-neutral-700 dark:text-neutral-300 text-sm">
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>No hourly limit. I stay until the meetup ends (usually under 4 hours)</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Solo or with friends</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>3–4 edited picks the same day</span></li>
+                    <ul class="space-y-3 text-neutral-700 dark:text-neutral-300 text-sm flex-grow">
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>No time limit. I shoot until the meetup ends</span></li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Group meetups welcome</span></li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>3–4 edited A-cuts on the day</span></li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Full edited set in about a month</span></li>
                     </ul>
                 </div>
-                <div class="flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-brand-400/50 dark:border-brand-500/40 shadow-xl">
-                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">Con companion</h3>
-                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Photographer and handler in one</p>
+
+                <div class="flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">Event companion</h3>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Photographer and supporter in one person</p>
                     <p class="text-3xl font-extrabold text-neutral-900 dark:text-white mb-6">₩150,000<span class="text-lg text-neutral-500 font-normal"> / day</span></p>
-                    <ul class="space-y-3 text-neutral-700 dark:text-neutral-300 text-sm">
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>By your side for the whole event day</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Fan, cooling spray, water, towel and a spare balaclava</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Hands out your badge cards while your vision is limited</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Candid photos of you and new friends all day</span></li>
+                    <ul class="space-y-3 text-neutral-700 dark:text-neutral-300 text-sm flex-grow">
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>By your side for the entire event day</span></li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Supporter duties such as fans, hydration and handing out badge cards</span></li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Candid photos capturing the event atmosphere</span></li>
                     </ul>
                 </div>
-                <div class="flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl">
-                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">Event staff</h3>
-                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">For event organizers</p>
+
+                <div class="flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">Shoot planning / Event staff</h3>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Official photography for event organizers</p>
                     <p class="text-3xl font-extrabold text-neutral-900 dark:text-white mb-6">Custom quote</p>
-                    <ul class="space-y-3 text-neutral-700 dark:text-neutral-300 text-sm">
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Official event photography</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Photo booth with lighting and on-site printing</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Commercial use included</span></li>
+                    <ul class="space-y-3 text-neutral-700 dark:text-neutral-300 text-sm flex-grow">
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Official event photo staff</span></li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Photo booth operation and on-site instant printing</span></li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span>Quote based on the event's type and size</span></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-brand-500/30 p-8 rounded-3xl shadow-xl">
-                    <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-4"><i class="ri-paypal-line text-[#003087] dark:text-[#5a9bff] mr-2"></i>Payment</h3>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">Pay by PayPal once we've confirmed your date and location. The price is set in KRW, and PayPal shows you the amount in your own currency at checkout. Location fees such as studio rental or entrance tickets are not included.</p>
+            <!-- Payment -->
+            <div class="bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-brand-500/30 p-6 md:p-8 rounded-3xl mb-10 flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-xl dark:shadow-[0_0_20px_rgba(139,92,246,0.1)]">
+                <div class="flex items-center space-x-5">
+                    <div class="w-12 h-12 bg-white/80 dark:bg-brand-500/10 border border-white dark:border-brand-500/30 text-brand-600 dark:text-brand-400 rounded-full flex items-center justify-center text-2xl shrink-0 shadow-sm"><i class="ri-bank-card-line"></i></div>
+                    <div>
+                        <h3 class="text-neutral-900 dark:text-white font-bold text-lg md:text-xl mb-1">PayPal accepted for all commissions</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm">Pay securely with PayPal. Prices are set in KRW, and PayPal shows the amount in your own currency at checkout.</p>
+                    </div>
                 </div>
-                <div class="bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-8 rounded-3xl shadow-xl">
-                    <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-4"><i class="ri-shield-check-line text-brand-600 dark:text-brand-400 mr-2"></i>Using your photos</h3>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">Share them freely on social media and websites, print them for yourself, or give them away. Merch, sales or a full copyright transfer need a separate license, so just ask.</p>
+                <div class="flex items-center space-x-2 self-end md:self-auto select-none" aria-hidden="true">
+                    <i class="ri-paypal-fill text-3xl text-[#003087] dark:text-[#5a9bff]"></i>
+                    <span class="text-neutral-900 dark:text-white font-bold text-lg tracking-tight">PayPal</span>
+                </div>
+            </div>
+
+            <!-- Before you book -->
+            <div id="policy" class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 md:p-12 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl mb-10">
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6"><i class="ri-calendar-event-line text-brand-600 dark:text-brand-400 mr-2"></i>Please check before booking</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                    <div>
+                        <h4 class="text-neutral-900 dark:text-white font-medium mb-2 border-b border-neutral-200 dark:border-neutral-700/50 pb-2">Shooting area</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">All prices are based on the Seoul metropolitan area. Shoots elsewhere add a travel fee based on distance.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-neutral-900 dark:text-white font-medium mb-2 border-b border-neutral-200 dark:border-neutral-700/50 pb-2">Rescheduling</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">If the weather or your condition makes shooting difficult, we pick another date instead of cancelling.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-neutral-900 dark:text-white font-medium mb-2 border-b border-neutral-200 dark:border-neutral-700/50 pb-2">Location costs</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">Studio rental and location entrance fees are not included in the price.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rights -->
+            <div id="rights" class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 md:p-12 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl">
+                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6"><i class="ri-shield-check-line text-brand-600 dark:text-brand-400 mr-2"></i>Rights and commercial use</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                    <div>
+                        <h4 class="text-neutral-900 dark:text-white font-medium mb-2 border-b border-neutral-200 dark:border-neutral-700/50 pb-2">Included by default</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">You're free to post the photos on your personal social media and websites (such as a blog), print them for yourself, and give them away for free.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-neutral-900 dark:text-white font-medium mb-2 border-b border-neutral-200 dark:border-neutral-700/50 pb-2">Commercial use (ask separately)</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed">Making or selling merchandise with the photos, or a full copyright transfer, comes with an additional fee.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How it works -->
-    <section id="how" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="process" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">Planning a shoot around your trip</h2>
-            <p class="text-neutral-600 dark:text-neutral-400">Message me as early as you can. Shoots are mostly on weekends.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">How it works</h2>
+            <p class="text-neutral-600 dark:text-neutral-400">From your first message to the final photos</p>
         </div>
         <div class="relative isolate">
             <div class="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-0.5 bg-neutral-200 dark:bg-neutral-800 -z-10 -translate-y-1/2" aria-hidden="true"></div>
             <ol class="flex flex-col md:flex-row items-stretch justify-between gap-10 md:gap-4">
                 <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">1</div>
-                    <h3 class="text-neutral-900 dark:text-white font-bold mb-2">Say hi</h3>
-                    <p class="text-xs text-neutral-600 dark:text-neutral-400">Your travel dates, number of suiters and the vibe you want</p>
+                    <h3 class="text-neutral-900 dark:text-white font-bold mb-2">Inquiry</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400">Talk about the date, location and mood you want</p>
                 </li>
                 <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">2</div>
-                    <h3 class="text-neutral-900 dark:text-white font-bold mb-2">Pick a day</h3>
-                    <p class="text-xs text-neutral-600 dark:text-neutral-400">We settle the date and location, then you pay via PayPal</p>
+                    <h3 class="text-neutral-900 dark:text-white font-bold mb-2">Booking</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400">Payment once the date and location are set</p>
                 </li>
                 <li class="relative bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-brand-400/50 dark:border-brand-500/50 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-[0_0_20px_rgba(139,92,246,0.15)]">
                     <div class="w-10 h-10 mx-auto bg-brand-600 dark:bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">3</div>
                     <h3 class="text-brand-700 dark:text-white font-bold mb-2">Shoot day</h3>
-                    <p class="text-xs text-neutral-600 dark:text-neutral-400">3–4 edited picks the same day, ready to post</p>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400">3–4 A-cuts delivered right after the shoot</p>
                 </li>
                 <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">4</div>
                     <h3 class="text-neutral-900 dark:text-white font-bold mb-2">Editing</h3>
-                    <p class="text-xs text-neutral-600 dark:text-neutral-400">Every photo edited with care, about a month</p>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400">About a month of careful editing</p>
                 </li>
                 <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">5</div>
-                    <h3 class="text-neutral-900 dark:text-white font-bold mb-2">Full set</h3>
-                    <p class="text-xs text-neutral-600 dark:text-neutral-400">High-res photos delivered online, wherever you are</p>
+                    <h3 class="text-neutral-900 dark:text-white font-bold mb-2">Final delivery</h3>
+                    <p class="text-xs text-neutral-600 dark:text-neutral-400">Full set of high-res edited photos</p>
                 </li>
             </ol>
         </div>
@@ -221,11 +280,68 @@
             <div class="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-10">
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-2">Portfolio</h2>
-                    <p class="text-neutral-600 dark:text-neutral-400 text-sm">Tap a photo to enlarge. Use arrow keys or swipe to browse.</p>
+                    <p class="text-neutral-600 dark:text-neutral-400 text-sm">Tap a photo to enlarge it. Use the arrow keys or swipe to browse.</p>
                 </div>
-                <a href="https://x.com/zumk_work" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 inline-flex items-center gap-1 hover:underline underline-offset-4"><i class="ri-twitter-x-line"></i> More on @zumk_work</a>
+                <a href="https://x.com/zumk_work/reposts" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 inline-flex items-center gap-1 hover:underline underline-offset-4">
+                    <i class="ri-twitter-x-line"></i> More on @zumk_work
+                </a>
             </div>
             <div id="gallery-grid" class="columns-2 md:columns-3 lg:columns-4 gap-4"></div>
+        </div>
+    </section>
+
+    <!-- Gear -->
+    <section id="gear" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">Gear</h2>
+            <p class="text-neutral-600 dark:text-neutral-400">The equipment I use for every setting, from indoor studios to outdoor events.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-camera-line"></i></div>
+                    <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Camera</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Canon</strong> EOS R5</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Canon</strong> EOS R7</span></li>
+                </ul>
+            </div>
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-camera-lens-line"></i></div>
+                    <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Lens</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">SIGMA</strong> A 17-40mm F1.8 DC</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-neutral-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">SIGMA</strong> S 70-200mm F2.8 DG OS HSM</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 35mm F1.4 Di USD F045</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 45mm F1.8 Di VC USD F013</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 85mm F1.8 Di VC USD F016</span></li>
+                </ul>
+            </div>
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-flashlight-line"></i></div>
+                    <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Lighting</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> ML100Bi</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> ML100R</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> V860III</span></li>
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> V860II <span class="text-xs text-brand-600 dark:text-brand-400 font-semibold ml-1">× 2</span></span></li>
+                </ul>
+            </div>
+            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-printer-line"></i></div>
+                    <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Printing</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
+                    <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Canon</strong> SELPHY CP1500</span></li>
+                </ul>
+                <p class="text-xs text-neutral-500 mt-6 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/60 pt-3">On-site printing is available for event companion days and some shoot sessions.</p>
+            </div>
         </div>
     </section>
 
@@ -233,27 +349,40 @@
     <section id="faq" class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">FAQ</h2>
+            <p class="text-neutral-600 dark:text-neutral-400">Answers to frequently asked questions.</p>
         </div>
         <div class="space-y-4">
             <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
-                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>How far in advance should I book?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
-                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">As soon as your travel dates are set. The badge at the top of this page shows whether I'm taking bookings for this month.</div>
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>When will I get my photos?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">On the day of the shoot, I edit and send you the best 3–4 A-cuts first. The full edited set follows in about a month.</div>
             </details>
             <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
-                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>What if it rains on the day?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
-                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">We move the shoot to another day that works for both of us. There's no cancellation. We just find a new date. If you're only in Korea for a few days, leave a spare day in your plans if you can.</div>
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>I'm worried about being photographed with my head off.</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">I never take photos while your head is off. I put the camera down during breaks, so feel free to rest.</div>
             </details>
             <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
-                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Can you shoot outside Seoul?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
-                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">Yes. Prices cover the Seoul metropolitan area (Seoul, Gyeonggi, Incheon). Anywhere else adds a travel fee based on distance.</div>
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Is there a time limit?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">The photoshoot is priced per session, so I don't count the hours. I stay and shoot until the meetup ends.</div>
             </details>
             <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
-                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Do I need to bring a handler?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
-                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">Not for a regular shoot at a quiet location. I take care of the basics while shooting. For crowded places or a full convention day, the con companion plan covers handling too.</div>
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>What if it rains or I'm not feeling well?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">We don't cancel the booking. We agree on another date that works for both of us and shoot then. If anything comes up, just let me know.</div>
             </details>
             <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
-                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Do I get RAW files?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
-                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">Unedited previews are available to help you pick favorites. RAW files aren't included by default. They're available as an add-on that includes copyright and commercial rights.</div>
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Can you shoot outside the Seoul area?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">Yes. All prices are based on the Seoul metropolitan area, and shoots elsewhere add a travel fee based on distance. Tell me the location when you get in touch and I'll give you the details.</div>
+            </details>
+            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Who pays for studio rental or location fees?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">Studio rental and entrance fees for outdoor locations are not included in the price. You'll need to book and pay for them yourself.</div>
+            </details>
+            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Do I need to bring a supporter?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">Not unless the location is crowded and busy. I know how tough suiting can be, so basic care and support come with every shoot.</div>
+            </details>
+            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+                <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>Do I get the original files?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
+                <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">Unedited originals are available on request, but please use them only to pick your favorites. RAW files aren't included by default. If you'd like to keep them, they're a separate paid option that includes copyright and commercial use rights.</div>
             </details>
         </div>
     </section>
@@ -262,18 +391,20 @@
     <section id="contact" class="py-24 bg-white/40 dark:bg-neutral-900/40 backdrop-blur-3xl px-6 border-t border-white/60 dark:border-neutral-800">
         <div class="max-w-2xl mx-auto text-center">
             <div class="w-16 h-16 bg-white/80 dark:bg-neutral-800 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 text-brand-600 dark:text-brand-400 shadow-md border border-white dark:border-neutral-700"><i class="ri-mail-send-line"></i></div>
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-6">Ready to shine in Korea?</h2>
-            <p class="text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed text-sm md:text-base">Send your travel dates, the number of suiters and the kind of photos you're dreaming of. I'll get back to you quickly.</p>
-            <span data-booking-status="long" class="status-badge mb-8 text-sm font-semibold px-4 py-2 rounded-full bg-white/70 dark:bg-neutral-900/70 border border-white dark:border-neutral-700/50 text-neutral-700 dark:text-neutral-300"></span>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-6">Ready to capture your brightest moment?</h2>
+            <p class="text-neutral-600 dark:text-neutral-400 mb-10 leading-relaxed text-sm md:text-base">
+                Let me know your preferred date, location and number of people so I can help you faster.<br class="hidden sm:block">
+                I'll get back to you as soon as I can.
+            </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://open.kakao.com/me/zumk" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 bg-[#FEE500]/90 hover:bg-[#FEE500] text-black px-7 py-4 rounded-2xl font-bold transition shadow-lg border border-yellow-300">
+                    <i class="ri-kakao-talk-fill text-xl"></i><span>KakaoTalk</span>
+                </a>
                 <a href="https://t.me/zhumook" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 bg-[#2AABEE]/90 hover:bg-[#2AABEE] text-white px-7 py-4 rounded-2xl font-bold transition shadow-lg border border-blue-400">
                     <i class="ri-telegram-fill text-xl"></i><span>Telegram</span>
                 </a>
                 <a href="https://x.com/zumk_work" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 bg-neutral-900 hover:bg-neutral-700 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-200 px-7 py-4 rounded-2xl font-bold transition shadow-lg">
                     <i class="ri-twitter-x-line text-xl"></i><span>X DM</span>
-                </a>
-                <a href="https://open.kakao.com/me/zumk" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center space-x-3 bg-[#FEE500]/90 hover:bg-[#FEE500] text-black px-7 py-4 rounded-2xl font-bold transition shadow-lg border border-yellow-300">
-                    <i class="ri-kakao-talk-fill text-xl"></i><span>KakaoTalk</span>
                 </a>
             </div>
         </div>

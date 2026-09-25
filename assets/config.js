@@ -30,17 +30,6 @@ tailwind.config = {
 
 // 3) 사이트 설정
 window.ZUMK = {
-    // 예약 현황용 Firebase 설정 — ADMIN_SETUP.md 순서대로 채워 주세요.
-    // 비어 있으면 사이트는 항상 "예약 가능"으로 표시됩니다.
-    firebase: {
-        apiKey: '',
-        authDomain: '',
-        projectId: '',
-        appId: ''
-    },
-    // 관리 페이지에 로그인할 수 있는 구글 계정 (Firestore 보안 규칙에도 같은 주소를 넣어야 함)
-    adminEmail: '',
-
     // 포트폴리오 이미지 목록 — 사진을 추가하려면 파일을 images/에 올리고 여기에 이름만 추가하세요.
     heroImages: [
         'hero1.webp', 'hero2.webp', 'hero3.webp', 'hero4.webp', 'hero5.webp', 'hero6.webp',

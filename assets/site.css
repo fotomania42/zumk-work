@@ -24,18 +24,6 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD G
     border-bottom-color: #262626;
 }
 
-/* ---------- 섹션 라벨 ---------- */
-.eyebrow {
-    display: flex; align-items: center; gap: .6rem;
-    margin-bottom: .9rem; white-space: nowrap;
-    font-size: .62rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
-    color: #7c3aed;
-}
-.eyebrow::before { content: ''; width: 1.5rem; height: 1px; background: currentColor; opacity: .6; }
-.eyebrow.justify-center::after { content: ''; width: 1.5rem; height: 1px; background: currentColor; opacity: .6; }
-.dark .eyebrow { color: #a78bfa; }
-@media (max-width: 640px) { .eyebrow { letter-spacing: .12em; gap: .45rem; } .eyebrow::before, .eyebrow.justify-center::after { width: 1rem; } }
-
 /* ---------- 히어로 무한 스크롤 ---------- */
 .marquee-wrap {
     -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
@@ -44,7 +32,7 @@ body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD G
 .marquee-track {
     display: flex;
     width: max-content;
-    animation: marquee 60s linear infinite;
+    animation: marquee 90s linear infinite;
 }
 .marquee-track:hover { animation-play-state: paused; }
 .marquee-group { display: flex; gap: 1rem; padding-right: 1rem; flex-shrink: 0; }

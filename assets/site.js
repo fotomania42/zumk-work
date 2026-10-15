@@ -69,7 +69,7 @@
                 img.alt = g === 0 ? t.photo(i + 1) : '';
                 img.decoding = 'async';
                 if (g === 1 || i > 5) img.loading = 'lazy';
-                img.className = 'h-48 md:h-64 rounded-xl object-cover shadow-lg border border-white/20 dark:border-neutral-800/50';
+                img.className = 'marquee-img rounded-2xl object-cover shadow-lg';
                 group.appendChild(img);
             });
             marquee.appendChild(group);
@@ -88,18 +88,39 @@
         galleryList.forEach(function (name, idx) {
             var btn = document.createElement('button');
             btn.type = 'button';
-            btn.className = 'block w-full break-inside-avoid mb-4 overflow-hidden rounded-xl cursor-zoom-in group bg-white/50 dark:bg-neutral-800/50 p-1 border border-white/60 dark:border-neutral-700/50 shadow-sm';
+            btn.className = 'gallery-item relative block w-full break-inside-avoid mb-3 md:mb-4 overflow-hidden rounded-2xl cursor-zoom-in bg-neutral-200/70 dark:bg-neutral-800/70';
             btn.setAttribute('aria-label', t.viewer + ': ' + t.photo(idx + 1));
             var img = document.createElement('img');
             img.src = dir + name;
             img.alt = t.photo(idx + 1);
             img.loading = 'lazy';
             img.decoding = 'async';
-            img.className = 'w-full h-auto rounded-lg object-cover transition duration-500 group-hover:scale-105 group-hover:opacity-90';
+            img.className = 'w-full h-auto object-cover';
+            var markLoaded = function () { img.classList.add('is-loaded'); };
+            if (img.complete && img.naturalWidth) markLoaded();
+            else { img.addEventListener('load', markLoaded); img.addEventListener('error', markLoaded); }
             btn.appendChild(img);
+            var zoom = document.createElement('span');
+            zoom.className = 'gallery-zoom';
+            zoom.setAttribute('aria-hidden', 'true');
+            zoom.innerHTML = '<i class="ri-zoom-in-line"></i>';
+            btn.appendChild(zoom);
             btn.addEventListener('click', function () { openLightbox(idx); });
             grid.appendChild(btn);
         });
+    }
+
+    /* ---------- 스크롤 등장 효과 ---------- */
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if ('IntersectionObserver' in window && !reduceMotion) {
+        var revealEls = document.querySelectorAll('section[id]:not(#gallery) > *:not(.max-w-7xl), section[id] > .max-w-7xl > *, #gallery > div > :first-child');
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+            });
+        }, { rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { el.setAttribute('data-reveal', ''); io.observe(el); });
+        root.classList.add('reveal-on');
     }
 
     /* ---------- 라이트박스 (←/→, ESC, 스와이프) ---------- */

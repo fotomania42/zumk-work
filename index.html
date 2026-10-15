@@ -43,12 +43,10 @@
 </head>
 <body class="bg-slate-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-300 selection:bg-brand-500 selection:text-white transition-colors duration-300 relative min-h-screen">
 
-    <div class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand-500/20 dark:bg-brand-500/10 blur-[100px] pointer-events-none -z-10"></div>
-    <div class="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-blue-500/20 dark:bg-blue-500/10 blur-[100px] pointer-events-none -z-10"></div>
 
     <!-- 내비게이션 -->
-    <nav id="navbar" class="fixed w-full z-50 top-0 py-4 px-6 md:px-12 flex justify-between items-center text-neutral-900 dark:text-white">
-        <a href="#top" class="text-2xl font-bold tracking-tighter">zumk.work</a>
+    <nav id="navbar" class="fixed w-full z-50 top-0 py-4 px-4 sm:px-6 md:px-12 flex justify-between items-center text-neutral-900 dark:text-white">
+        <a href="#top" class="text-xl sm:text-2xl font-bold tracking-tighter">zumk.work</a>
         <div class="hidden xl:flex space-x-7 text-sm font-medium text-neutral-600 dark:text-neutral-400">
             <a href="#features" class="hover:text-brand-600 dark:hover:text-white transition">소개</a>
             <a href="#pricing" class="hover:text-brand-600 dark:hover:text-white transition">가격</a>
@@ -57,9 +55,13 @@
             <a href="#gear" class="hover:text-brand-600 dark:hover:text-white transition">장비</a>
             <a href="#faq" class="hover:text-brand-600 dark:hover:text-white transition">FAQ</a>
         </div>
-        <div class="flex items-center gap-2 md:gap-3">
-            <a href="en.html" lang="en" hreflang="en" class="text-sm font-bold px-3 py-2 rounded-full hover:bg-white/60 dark:hover:bg-neutral-800/60 transition" aria-label="English">EN</a>
-            <a href="#contact" class="bg-neutral-900 text-white dark:bg-white dark:text-black px-4 md:px-5 py-2 rounded-full text-sm font-bold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition shadow-lg">예약 문의</a>
+        <div class="flex items-center gap-1 sm:gap-2 md:gap-3">
+            <button id="theme-toggle" type="button" aria-label="라이트/다크 모드 전환" class="w-10 h-10 rounded-full flex items-center justify-center text-neutral-600 dark:text-neutral-300 hover:bg-white/60 dark:hover:bg-neutral-800/60 transition">
+                <i class="ri-sun-line hidden dark:block text-lg"></i>
+                <i class="ri-moon-clear-line dark:hidden text-lg"></i>
+            </button>
+            <a href="en.html" lang="en" hreflang="en" class="text-xs sm:text-sm font-bold px-2.5 sm:px-3 py-2 rounded-full hover:bg-white/60 dark:hover:bg-neutral-800/60 transition" aria-label="English">EN</a>
+            <a href="#contact" class="whitespace-nowrap bg-neutral-900 text-white dark:bg-white dark:text-black px-3.5 md:px-5 py-2 rounded-full text-xs sm:text-sm font-bold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition shadow-lg">예약 문의</a>
             <button id="menu-toggle" type="button" class="xl:hidden w-10 h-10 -mr-2 rounded-full flex items-center justify-center hover:bg-white/60 dark:hover:bg-neutral-800/60 transition" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="ri-menu-line text-2xl"></i>
             </button>
@@ -76,32 +78,25 @@
         </div>
     </nav>
 
-    <button id="theme-toggle" type="button" aria-label="라이트/다크 모드 전환" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-white/70 dark:bg-neutral-800/70 backdrop-blur-xl border border-white/50 dark:border-neutral-700/50 shadow-xl flex items-center justify-center text-neutral-800 dark:text-neutral-200 hover:scale-110 transition-transform duration-300">
-        <i class="ri-sun-line hidden dark:block text-xl text-yellow-400"></i>
-        <i class="ri-moon-clear-line dark:hidden text-xl text-brand-600"></i>
-    </button>
 
     <!-- 히어로 -->
     <header id="top" class="relative min-h-screen flex flex-col justify-center overflow-hidden pt-20">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-50/40 via-slate-50/60 to-slate-50 dark:from-neutral-950/40 dark:via-neutral-950/60 dark:to-neutral-950 z-10 pointer-events-none transition-colors duration-300"></div>
 
-        <div class="relative z-20 text-center px-6 max-w-4xl mx-auto mt-16 mb-14">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-neutral-900 dark:text-white leading-tight mb-6 break-keep">
+        <div class="relative z-20 text-center px-6 max-w-4xl mx-auto mt-4 md:mt-2 mb-6 md:mb-8">
+            <h1 class="hero-title text-[1.75rem] sm:text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight mb-8 break-keep">
                 <span class="block">당신의 퍼슈트를</span>
                 <span class="block"><span class="text-transparent bg-clip-text bg-[linear-gradient(to_right,#4285f4,#a142f4,#ea4335,#fbbc04)] dark:bg-[linear-gradient(to_right,#669df6,#b872f9,#f26c61,#fcc936)]">가장 빛나는 순간</span>으로</span>
                 <span class="block">기록해 드립니다.</span>
             </h1>
-            <div class="flex flex-col sm:flex-row justify-center gap-3">
-                <a href="#gallery" class="inline-flex items-center justify-center space-x-2 text-neutral-800 dark:text-white border border-white/50 dark:border-neutral-700/50 bg-white/50 dark:bg-neutral-800/50 hover:bg-white/80 dark:hover:bg-neutral-800 px-6 py-3 rounded-full transition backdrop-blur-md shadow-lg">
-                    <span>포트폴리오 보기</span><i class="ri-arrow-down-line"></i>
-                </a>
+            <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
                 <a href="#pricing" class="inline-flex items-center justify-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition shadow-lg font-semibold">
                     <span>가격 확인하기</span>
                 </a>
+                <a href="#gallery" class="inline-flex items-center gap-1 text-neutral-700 dark:text-neutral-300 font-medium hover:text-brand-600 dark:hover:text-white transition underline-offset-4 hover:underline"><span>포트폴리오 보기</span><i class="ri-arrow-down-line"></i></a>
             </div>
         </div>
 
-        <div class="marquee-wrap relative z-20 mt-auto pb-10 w-full overflow-hidden">
+        <div class="marquee-wrap relative z-20 mt-auto pb-8 md:pb-10 w-full overflow-hidden">
             <div id="marquee" class="marquee-track px-4"></div>
         </div>
     </header>
@@ -109,37 +104,34 @@
     <!-- 소개 -->
     <section id="features" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4 break-keep">퍼슈트에 대한 높은 이해도로 담아내는 세심한 디테일</h2>
+            <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-4 break-keep">퍼슈트에 대한 높은 이해도로 담아내는 세심한 디테일</h2>
             <p class="text-neutral-600 dark:text-neutral-400 break-keep">퍼슈트를 잘 아는 만큼, 작은 디테일도 놓치지 않아요</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-user-smile-line"></i></div>
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/30 p-8 rounded-3xl shadow-sm">
+                <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl"><i class="ri-user-smile-line"></i></div>
                 <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">퍼슈트 전문 스냅</h3>
                 <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm break-keep">퍼슈트와 퍼슈터를 잘 알기에, 가장 편안하고 안전한 상태에서 촬영합니다.</p>
             </div>
-            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-camera-lens-line"></i></div>
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/30 p-8 rounded-3xl shadow-sm">
+                <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl"><i class="ri-camera-lens-line"></i></div>
                 <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">디테일한 촬영</h3>
                 <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm break-keep">캐릭터의 인상이 가장 빛나는 순간을 찾아내어, 배경과 어우러지는 사진을 촬영합니다.</p>
             </div>
-            <div class="bg-white/40 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/60 dark:border-neutral-700/30 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)]">
-                <div class="w-12 h-12 bg-white/60 dark:bg-neutral-800/60 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl shadow-sm border border-white dark:border-neutral-700/30"><i class="ri-timer-flash-line"></i></div>
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/30 p-8 rounded-3xl shadow-sm">
+                <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 mb-6 text-2xl"><i class="ri-timer-flash-line"></i></div>
                 <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">당일 A컷, 꼼꼼한 전체 보정</h3>
                 <p class="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm break-keep">촬영이 끝나면 바로 SNS에 올릴 수 있는 A컷 3~4장을 먼저 전달하고, 나머지 사진도 모두 꼼꼼히 보정해 드립니다.</p>
             </div>
         </div>
 
         <!-- 활동 이력 -->
-        <div class="mt-10 bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 rounded-3xl p-6 md:p-8 shadow-lg flex flex-col lg:flex-row lg:items-center gap-6">
+        <div class="mt-10 bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-3xl p-6 md:p-8 shadow-sm">
             <ul class="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                 <li class="flex items-start gap-3"><i class="ri-calendar-check-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span class="break-keep"><strong class="block text-neutral-900 dark:text-white">2019년부터 촬영</strong><span class="text-neutral-600 dark:text-neutral-400">퍼슈트 모임과 행사를 꾸준히 기록</span></span></li>
                 <li class="flex items-start gap-3"><i class="ri-award-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span class="break-keep"><strong class="block text-neutral-900 dark:text-white">K-FUR 공식 촬영 스태프</strong><span class="text-neutral-600 dark:text-neutral-400">FUR STAGE, LevyBucks</span></span></li>
                 <li class="flex items-start gap-3"><i class="ri-map-pin-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span class="break-keep"><strong class="block text-neutral-900 dark:text-white">수도권 촬영</strong><span class="text-neutral-600 dark:text-neutral-400">서울, 경기, 인천 로케이션</span></span></li>
             </ul>
-            <a href="https://x.com/zumk_work/reposts" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-neutral-900 text-white dark:bg-white dark:text-black px-5 py-3 rounded-2xl text-sm font-bold hover:bg-neutral-700 dark:hover:bg-neutral-200 transition shrink-0">
-                <i class="ri-twitter-x-line"></i><span>최근 작업은 X에서</span>
-            </a>
         </div>
     </section>
 
@@ -147,15 +139,15 @@
     <section id="pricing" class="py-24 px-6 md:px-12">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">커미션 가격 안내</h2>
+                <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-4">커미션 가격 안내</h2>
                 <p class="text-neutral-600 dark:text-neutral-400 break-keep">카드를 누르면 서비스별 자세한 안내를 볼 수 있어요</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-                <a href="basic-detail.html" class="group flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:border-brand-300 dark:hover:border-brand-500/50 transition-colors">
+                <a href="basic-detail.html" class="group flex flex-col bg-white dark:bg-neutral-900/70 p-8 rounded-[2rem] border border-neutral-200/80 dark:border-neutral-700/40 shadow-sm hover:border-brand-300 dark:hover:border-brand-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-500/10 transition duration-300">
                     <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">기본 촬영</h3>
                     <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4 break-keep">주말 중심, 퍼슈트 모임 촬영회 1회</p>
-                    <p class="text-3xl font-extrabold text-neutral-900 dark:text-white mb-6">150,000<span class="text-lg text-neutral-500 font-normal">원 / 1회</span></p>
+                    <p class="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white mb-6">150,000<span class="text-lg text-neutral-500 font-normal">원 / 1회</span></p>
                     <ul class="space-y-3 mb-8 text-neutral-700 dark:text-neutral-300 text-sm flex-grow">
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">모임이 끝날 때까지 시간 제한 없이 촬영</span></li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">여러 명이 함께하는 모임도 OK</span></li>
@@ -165,10 +157,10 @@
                     <span class="text-sm font-bold text-brand-600 dark:text-brand-400 inline-flex items-center">자세히 보기<i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i></span>
                 </a>
 
-                <a href="supporter-detail.html" class="group flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:border-brand-300 dark:hover:border-brand-500/50 transition-colors">
+                <a href="supporter-detail.html" class="group flex flex-col bg-white dark:bg-neutral-900/70 p-8 rounded-[2rem] border border-neutral-200/80 dark:border-neutral-700/40 shadow-sm hover:border-brand-300 dark:hover:border-brand-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-500/10 transition duration-300">
                     <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">행사 동행</h3>
                     <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4 break-keep">사진사와 서포터를 한 사람이 겸임</p>
-                    <p class="text-3xl font-extrabold text-neutral-900 dark:text-white mb-6">150,000<span class="text-lg text-neutral-500 font-normal">원 / 1일</span></p>
+                    <p class="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white mb-6">150,000<span class="text-lg text-neutral-500 font-normal">원 / 1일</span></p>
                     <ul class="space-y-3 mb-8 text-neutral-700 dark:text-neutral-300 text-sm flex-grow">
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">행사 전체 일정 전담 동행</span></li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">선풍기, 수분 보충, 명함 배포 등 서포터 역할</span></li>
@@ -177,10 +169,10 @@
                     <span class="text-sm font-bold text-brand-600 dark:text-brand-400 inline-flex items-center">자세히 보기<i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i></span>
                 </a>
 
-                <a href="event-detail.html" class="group flex flex-col bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl dark:shadow-[0_8px_30px_rgba(0,0,0,0.3)] hover:border-brand-300 dark:hover:border-brand-500/50 transition-colors">
+                <a href="event-detail.html" class="group flex flex-col bg-white dark:bg-neutral-900/70 p-8 rounded-[2rem] border border-neutral-200/80 dark:border-neutral-700/40 shadow-sm hover:border-brand-300 dark:hover:border-brand-500/50 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-500/10 transition duration-300">
                     <h3 class="text-2xl font-bold text-neutral-900 dark:text-white mb-1">촬영 기획 / 행사 스태프</h3>
                     <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4 break-keep">행사 주최 측을 위한 공식 촬영</p>
-                    <p class="text-3xl font-extrabold text-neutral-900 dark:text-white mb-6">상담 후 견적</p>
+                    <p class="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white mb-6">상담 후 견적</p>
                     <ul class="space-y-3 mb-8 text-neutral-700 dark:text-neutral-300 text-sm flex-grow">
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">행사 공식 사진 스태프 업무</span></li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">포토 부스 운영과 현장 즉석 인화</span></li>
@@ -191,17 +183,15 @@
             </div>
 
             <!-- 결제 -->
-            <div class="bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-brand-500/30 p-6 md:p-8 rounded-3xl mb-10 flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-xl dark:shadow-[0_0_20px_rgba(139,92,246,0.1)]">
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-brand-500/30 p-6 md:p-8 rounded-3xl mb-10 flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-sm">
                 <div class="flex items-center space-x-5">
-                    <div class="w-12 h-12 bg-white/80 dark:bg-brand-500/10 border border-white dark:border-brand-500/30 text-brand-600 dark:text-brand-400 rounded-full flex items-center justify-center text-2xl shrink-0 shadow-sm"><i class="ri-bank-card-line"></i></div>
+                    <div class="w-12 h-12 bg-brand-50 dark:bg-brand-500/10 border border-brand-100 dark:border-brand-500/30 text-brand-600 dark:text-brand-400 rounded-full flex items-center justify-center text-2xl shrink-0 shadow-sm"><i class="ri-bank-card-line"></i></div>
                     <div>
                         <h3 class="text-neutral-900 dark:text-white font-bold text-lg md:text-xl mb-1">모든 커미션 카드 결제 가능</h3>
                         <p class="text-neutral-600 dark:text-neutral-400 text-sm break-keep">네이버페이로 안전하게 결제할 수 있어요. 해외 오너님은 <a href="en.html" class="font-semibold text-brand-600 dark:text-brand-400 underline underline-offset-2">PayPal 결제</a>를 이용해 주세요.</p>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 self-end md:self-auto" aria-hidden="true">
-                    <i class="ri-bank-card-2-line text-2xl text-neutral-400 dark:text-neutral-500"></i>
-                    <span class="text-neutral-300 dark:text-neutral-700">|</span>
                     <div class="flex items-center space-x-1 select-none">
                         <div class="w-7 h-7 bg-[#03C75A] rounded flex items-center justify-center shadow-sm"><span class="text-white font-black text-sm leading-none">N</span></div>
                         <span class="text-neutral-900 dark:text-white font-bold text-lg tracking-tight">Pay</span>
@@ -210,8 +200,8 @@
             </div>
 
             <!-- 예약 전 안내 -->
-            <div id="policy" class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 md:p-12 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl mb-10">
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6"><i class="ri-calendar-event-line text-brand-600 dark:text-brand-400 mr-2"></i>예약 전에 확인해 주세요</h3>
+            <div id="policy" class="p-6 md:p-8 rounded-3xl border border-neutral-200 dark:border-neutral-800 mb-10">
+                <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-5"><i class="ri-calendar-event-line text-neutral-400 dark:text-neutral-500 mr-2"></i>예약 전에 확인해 주세요</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
                     <div>
                         <h4 class="text-neutral-900 dark:text-white font-medium mb-2 border-b border-neutral-200 dark:border-neutral-700/50 pb-2">촬영 지역</h4>
@@ -229,8 +219,8 @@
             </div>
 
             <!-- 권리 -->
-            <div id="rights" class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-2xl p-8 md:p-12 rounded-[2rem] border border-white/70 dark:border-neutral-700/40 shadow-xl">
-                <h3 class="text-xl font-bold text-neutral-900 dark:text-white mb-6"><i class="ri-shield-check-line text-brand-600 dark:text-brand-400 mr-2"></i>권리 및 상업적 이용 안내</h3>
+            <div id="rights" class="p-6 md:p-8 rounded-3xl border border-neutral-200 dark:border-neutral-800">
+                <h3 class="text-lg font-bold text-neutral-900 dark:text-white mb-5"><i class="ri-shield-check-line text-neutral-400 dark:text-neutral-500 mr-2"></i>권리 및 상업적 이용 안내</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                     <div>
                         <h4 class="text-neutral-900 dark:text-white font-medium mb-2 border-b border-neutral-200 dark:border-neutral-700/50 pb-2">기본 허용 범위</h4>
@@ -248,33 +238,33 @@
     <!-- 진행 과정 -->
     <section id="process" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">작업 진행 과정</h2>
+            <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-4">작업 진행 과정</h2>
             <p class="text-neutral-600 dark:text-neutral-400 break-keep">문의부터 최종 사진 전달까지</p>
         </div>
         <div class="relative isolate">
-            <div class="hidden md:block absolute top-1/2 left-[10%] right-[10%] h-0.5 bg-neutral-200 dark:bg-neutral-800 -z-10 -translate-y-1/2" aria-hidden="true"></div>
-            <ol class="flex flex-col md:flex-row items-stretch justify-between gap-10 md:gap-4">
-                <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
+            <div class="hidden lg:block absolute top-1/2 left-[10%] right-[10%] h-0.5 bg-neutral-200 dark:bg-neutral-800 -z-10 -translate-y-1/2" aria-hidden="true"></div>
+            <ol class="flex flex-col lg:flex-row items-stretch justify-between gap-10 lg:gap-4">
+                <li class="relative bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full lg:w-1/5 text-center shadow-sm">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">1</div>
                     <h3 class="text-neutral-900 dark:text-white font-bold mb-2">문의 및 상담</h3>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">일정, 장소, 원하는 분위기 상담</p>
                 </li>
-                <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
+                <li class="relative bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full lg:w-1/5 text-center shadow-sm">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">2</div>
                     <h3 class="text-neutral-900 dark:text-white font-bold mb-2">일정 확정</h3>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">날짜와 장소 확정 후 결제</p>
                 </li>
-                <li class="relative bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border border-brand-400/50 dark:border-brand-500/50 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-[0_0_20px_rgba(139,92,246,0.15)]">
-                    <div class="w-10 h-10 mx-auto bg-brand-600 dark:bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">3</div>
-                    <h3 class="text-brand-700 dark:text-white font-bold mb-2">촬영 당일</h3>
+                <li class="relative bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full lg:w-1/5 text-center shadow-sm">
+                    <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">3</div>
+                    <h3 class="text-neutral-900 dark:text-white font-bold mb-2">촬영 당일</h3>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">촬영 후 A컷 3~4장 바로 전달</p>
                 </li>
-                <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
+                <li class="relative bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full lg:w-1/5 text-center shadow-sm">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">4</div>
                     <h3 class="text-neutral-900 dark:text-white font-bold mb-2">전체 보정</h3>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">약 한 달 동안 꼼꼼히 보정</p>
                 </li>
-                <li class="relative bg-white/60 dark:bg-neutral-900/60 backdrop-blur-md border border-white/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full md:w-1/5 text-center shadow-lg">
+                <li class="relative bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-2xl w-full lg:w-1/5 text-center shadow-sm">
                     <div class="w-10 h-10 mx-auto bg-brand-500 text-white rounded-full flex items-center justify-center font-bold mb-4 -mt-10 border-4 border-slate-50 dark:border-neutral-950 shadow-md">5</div>
                     <h3 class="text-neutral-900 dark:text-white font-bold mb-2">최종본 전달</h3>
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">고해상도 전체 보정본 전달</p>
@@ -284,31 +274,31 @@
     </section>
 
     <!-- 포트폴리오 -->
-    <section id="gallery" class="py-24 px-6 md:px-12">
-        <div class="max-w-7xl mx-auto bg-white/30 dark:bg-neutral-900/30 backdrop-blur-3xl p-6 md:p-10 rounded-[3rem] border border-white/50 dark:border-neutral-700/30 shadow-2xl">
+    <section id="gallery" class="py-24 px-4 sm:px-6 md:px-12">
+        <div class="max-w-[90rem] mx-auto">
             <div class="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-10">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-2">포트폴리오</h2>
+                    <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-2">포트폴리오</h2>
                     <p class="text-neutral-600 dark:text-neutral-400 break-keep text-sm">사진을 누르면 크게 볼 수 있어요. 방향키나 스와이프로 넘겨 보세요.</p>
                 </div>
                 <a href="https://x.com/zumk_work/reposts" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 inline-flex items-center gap-1 hover:underline underline-offset-4">
                     <i class="ri-twitter-x-line"></i> @zumk_work에서 더 보기
                 </a>
             </div>
-            <div id="gallery-grid" class="columns-2 md:columns-3 lg:columns-4 gap-4"></div>
+            <div id="gallery-grid" class="columns-2 md:columns-3 xl:columns-4 gap-3 md:gap-4"></div>
         </div>
     </section>
 
     <!-- 장비 -->
     <section id="gear" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">장비 목록</h2>
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white mb-4">장비 목록</h2>
             <p class="text-neutral-600 dark:text-neutral-400 break-keep">실내 스튜디오부터 야외 행사까지, 환경에 맞춰 사용하는 장비 구성입니다.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-sm">
                 <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-camera-line"></i></div>
+                    <div class="w-10 h-10 bg-brand-50 dark:bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl"><i class="ri-camera-line"></i></div>
                     <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Camera</h3>
                 </div>
                 <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
@@ -316,9 +306,9 @@
                     <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Canon</strong> EOS R7</span></li>
                 </ul>
             </div>
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-sm">
                 <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-camera-lens-line"></i></div>
+                    <div class="w-10 h-10 bg-brand-50 dark:bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl"><i class="ri-camera-lens-line"></i></div>
                     <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Lens</h3>
                 </div>
                 <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
@@ -329,9 +319,9 @@
                     <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">Tamron</strong> SP 85mm F1.8 Di VC USD F016</span></li>
                 </ul>
             </div>
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-sm">
                 <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-flashlight-line"></i></div>
+                    <div class="w-10 h-10 bg-brand-50 dark:bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl"><i class="ri-flashlight-line"></i></div>
                     <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Lighting</h3>
                 </div>
                 <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
@@ -341,9 +331,9 @@
                     <li class="flex items-baseline"><span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2 shrink-0"></span><span><strong class="text-neutral-900 dark:text-neutral-200">GODOX</strong> V860II <span class="text-xs text-brand-600 dark:text-brand-400 font-semibold ml-1">× 2</span></span></li>
                 </ul>
             </div>
-            <div class="bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl border border-white/70 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-lg">
+            <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 p-6 rounded-3xl flex flex-col shadow-sm">
                 <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-10 h-10 bg-white/80 dark:bg-neutral-800 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl shadow-sm border border-white dark:border-neutral-700/50"><i class="ri-printer-line"></i></div>
+                    <div class="w-10 h-10 bg-brand-50 dark:bg-brand-500/10 rounded-xl flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl"><i class="ri-printer-line"></i></div>
                     <h3 class="text-lg font-bold text-neutral-900 dark:text-white tracking-wide">Printing</h3>
                 </div>
                 <ul class="space-y-3 text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
@@ -357,39 +347,39 @@
     <!-- FAQ -->
     <section id="faq" class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-4">FAQ</h2>
+            <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-4">FAQ</h2>
             <p class="text-neutral-600 dark:text-neutral-400 break-keep">자주 묻는 질문들을 모았습니다.</p>
         </div>
         <div class="space-y-4">
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>사진은 언제 받을 수 있나요?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">촬영 당일에 가장 잘 나온 A컷 3~4장을 먼저 보정해서 보내드려요. 전체 보정본은 약 한 달 전후로 전달해 드립니다.</div>
             </details>
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>헤드 오프 모습이 찍힐까 걱정돼요.</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">헤드 오프 상태는 절대 촬영하지 않습니다. 휴식 중에는 카메라를 내려놓으니 편하게 쉬셔도 돼요.</div>
             </details>
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>촬영 시간이 정해져 있나요?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">기본 촬영은 1회 기준이라 시간을 따로 재지 않아요. 모임이 끝날 때까지 함께하며 촬영합니다.</div>
             </details>
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>비가 오거나 컨디션이 안 좋으면 어떻게 하나요?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">예약을 취소하지 않고, 서로 가능한 날짜로 다시 협의해서 촬영을 진행합니다. 상황이 생기면 편하게 연락 주세요.</div>
             </details>
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>지방에서도 촬영할 수 있나요?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">가능합니다. 모든 가격은 수도권 기준이며, 지방 촬영은 거리에 따라 출장비가 추가돼요. 문의 시 지역을 알려 주시면 안내해 드릴게요.</div>
             </details>
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>야외/스튜디오 대관 비용은 어떻게 되나요?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">촬영 장소 대관료와 야외 촬영지 입장료는 촬영 비용에 포함되지 않으며, 오너님께서 직접 예약하고 부담해 주셔야 합니다.</div>
             </details>
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>촬영 시 서포터 동행이 필수인가요?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">사람이 많고 혼잡한 장소가 아니라면 꼭 동행하실 필요는 없습니다. 퍼슈팅의 고충을 잘 아는 만큼, 원활한 촬영을 위한 기본적인 케어와 서포팅을 함께 진행합니다.</div>
             </details>
-            <details class="group bg-white/50 dark:bg-neutral-900/50 backdrop-blur-lg border border-white/80 dark:border-neutral-700/40 rounded-2xl open:bg-white/80 dark:open:bg-neutral-900/80 transition-colors shadow-md">
+            <details class="group bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-2xl open:bg-white dark:open:bg-neutral-900/80 transition-colors shadow-sm">
                 <summary class="flex justify-between items-center gap-4 cursor-pointer p-6 text-neutral-900 dark:text-white font-medium list-none [&::-webkit-details-marker]:hidden"><span>원본 사진도 제공되나요?</span><i class="ri-add-line shrink-0 transition-transform duration-300 group-open:rotate-45 text-brand-600 dark:text-brand-400"></i></summary>
                 <div class="px-6 pb-6 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed break-keep border-t border-neutral-200 dark:border-neutral-800/50 pt-4 mt-2">셀렉용 원본 파일은 필요하신 경우 제공해 드리지만, 사진을 고르는 용도로만 사용해 주세요. RAW 파일은 기본적으로 제공되지 않으며, 소장을 원하시면 저작권 및 상업적 이용 권리가 포함된 별도 옵션 비용이 발생합니다.</div>
             </details>
@@ -399,8 +389,7 @@
     <!-- 문의 -->
     <section id="contact" class="py-24 bg-white/40 dark:bg-neutral-900/40 backdrop-blur-3xl px-6 border-t border-white/60 dark:border-neutral-800">
         <div class="max-w-2xl mx-auto text-center">
-            <div class="w-16 h-16 bg-white/80 dark:bg-neutral-800 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 text-brand-600 dark:text-brand-400 shadow-md border border-white dark:border-neutral-700"><i class="ri-mail-send-line"></i></div>
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white mb-6 break-keep">빛나는 모습을 남길 준비가 되셨나요?</h2>
+            <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-6 break-keep">빛나는 모습을 남길 준비가 되셨나요?</h2>
             <p class="text-neutral-600 dark:text-neutral-400 mb-10 leading-relaxed text-sm md:text-base break-keep">
                 희망 날짜, 장소, 인원을 함께 알려 주시면 더 빠르게 안내해 드릴 수 있어요.<br class="hidden sm:block">
                 확인 후 신속하게 답변해 드리겠습니다.

@@ -42,5 +42,7 @@ window.ZUMK = {
         'work7.webp', 'work8.webp', 'work9.webp', 'work10.webp', 'work11.webp', 'work12.webp',
         'work13.webp', 'work14.webp', 'work15.webp', 'work16.webp', 'work17.webp'
     ],
+    // 포트폴리오에서 처음 보여 줄 사진 수 (나머지는 '더 보기' 버튼으로 펼침)
+    galleryInitial: 12,
     imageDir: 'images/'
 };

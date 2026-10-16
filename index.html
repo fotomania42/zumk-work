@@ -48,10 +48,10 @@
     <nav id="navbar" class="fixed w-full z-50 top-0 py-4 px-4 sm:px-6 md:px-12 flex justify-between items-center text-neutral-900 dark:text-white">
         <a href="#top" class="text-xl sm:text-2xl font-bold tracking-tighter">zumk.work</a>
         <div class="hidden xl:flex space-x-7 text-sm font-medium text-neutral-600 dark:text-neutral-400">
+            <a href="#gallery" class="hover:text-brand-600 dark:hover:text-white transition">포트폴리오</a>
             <a href="#features" class="hover:text-brand-600 dark:hover:text-white transition">소개</a>
             <a href="#pricing" class="hover:text-brand-600 dark:hover:text-white transition">가격</a>
             <a href="#process" class="hover:text-brand-600 dark:hover:text-white transition">진행 과정</a>
-            <a href="#gallery" class="hover:text-brand-600 dark:hover:text-white transition">포트폴리오</a>
             <a href="#gear" class="hover:text-brand-600 dark:hover:text-white transition">장비</a>
             <a href="#faq" class="hover:text-brand-600 dark:hover:text-white transition">FAQ</a>
         </div>
@@ -68,10 +68,10 @@
         </div>
         <div id="mobile-menu" class="hidden xl:hidden absolute top-full left-0 right-0 px-6 pb-6 pt-2 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl border-b border-white/60 dark:border-neutral-800 shadow-lg">
             <div class="flex flex-col font-medium text-neutral-800 dark:text-neutral-200">
+                <a href="#gallery" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">포트폴리오</a>
                 <a href="#features" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">소개</a>
                 <a href="#pricing" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">가격</a>
                 <a href="#process" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">진행 과정</a>
-                <a href="#gallery" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">포트폴리오</a>
                 <a href="#gear" class="py-3 border-b border-neutral-200/70 dark:border-neutral-800">장비</a>
                 <a href="#faq" class="py-3">FAQ</a>
             </div>
@@ -89,10 +89,10 @@
                 <span class="block">기록해 드립니다.</span>
             </h1>
             <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
-                <a href="#pricing" class="inline-flex items-center justify-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition shadow-lg font-semibold">
-                    <span>가격 확인하기</span>
+                <a href="#gallery" class="inline-flex items-center justify-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-full transition shadow-lg font-semibold">
+                    <span>포트폴리오 보기</span>
                 </a>
-                <a href="#gallery" class="inline-flex items-center gap-1 text-neutral-700 dark:text-neutral-300 font-medium hover:text-brand-600 dark:hover:text-white transition underline-offset-4 hover:underline"><span>포트폴리오 보기</span><i class="ri-arrow-down-line"></i></a>
+                <a href="#pricing" class="inline-flex items-center gap-1 text-neutral-700 dark:text-neutral-300 font-medium hover:text-brand-600 dark:hover:text-white transition underline-offset-4 hover:underline"><span>가격 확인하기</span><i class="ri-arrow-right-line"></i></a>
             </div>
         </div>
 
@@ -101,11 +101,27 @@
         </div>
     </header>
 
+    <!-- 포트폴리오 -->
+    <section id="gallery" class="py-24 px-4 sm:px-6 md:px-12">
+        <div class="max-w-[90rem] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-10">
+                <div>
+                    <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-2">포트폴리오</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400 break-keep text-sm">사진을 누르면 크게 볼 수 있어요. 방향키나 스와이프로 넘겨 보세요.</p>
+                </div>
+                <a href="https://x.com/zumk_work/reposts" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 inline-flex items-center gap-1 hover:underline underline-offset-4">
+                    <i class="ri-twitter-x-line"></i> 오너님들이 SNS에 올린 사진 보기
+                </a>
+            </div>
+            <div id="gallery-grid" class="columns-2 md:columns-3 xl:columns-4 gap-3 md:gap-4"></div>
+        </div>
+    </section>
+
     <!-- 소개 -->
     <section id="features" class="py-24 px-6 md:px-12 max-w-7xl mx-auto relative">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-4 break-keep">퍼슈트에 대한 높은 이해도로 담아내는 세심한 디테일</h2>
-            <p class="text-neutral-600 dark:text-neutral-400 break-keep">퍼슈트를 잘 아는 만큼, 작은 디테일도 놓치지 않아요</p>
+            <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-4 break-keep">사진사로 부른 걸 후회하지 않도록</h2>
+            <p class="text-neutral-600 dark:text-neutral-400 break-keep">퍼슈트에 대한 높은 이해도로, 작은 디테일까지 세심하게 담아요</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/30 p-8 rounded-3xl shadow-sm">
@@ -127,9 +143,10 @@
 
         <!-- 활동 이력 -->
         <div class="mt-10 bg-white dark:bg-neutral-900/70 border border-neutral-200/80 dark:border-neutral-700/40 rounded-3xl p-6 md:p-8 shadow-sm">
-            <ul class="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+            <ul class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                 <li class="flex items-start gap-3"><i class="ri-calendar-check-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span class="break-keep"><strong class="block text-neutral-900 dark:text-white">2019년부터 촬영</strong><span class="text-neutral-600 dark:text-neutral-400">퍼슈트 모임과 행사를 꾸준히 기록</span></span></li>
                 <li class="flex items-start gap-3"><i class="ri-award-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span class="break-keep"><strong class="block text-neutral-900 dark:text-white">K-FUR 공식 촬영 스태프</strong><span class="text-neutral-600 dark:text-neutral-400">FUR STAGE, LevyBucks</span></span></li>
+                <li class="flex items-start gap-3"><i class="ri-camera-3-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span class="break-keep"><strong class="block text-neutral-900 dark:text-white">행사 공식 포토부스</strong><span class="text-neutral-600 dark:text-neutral-400">퍼리조아2, 퍼뮤즈먼트2</span></span></li>
                 <li class="flex items-start gap-3"><i class="ri-map-pin-line text-xl text-brand-600 dark:text-brand-400 shrink-0"></i><span class="break-keep"><strong class="block text-neutral-900 dark:text-white">수도권 촬영</strong><span class="text-neutral-600 dark:text-neutral-400">서울, 경기, 인천 로케이션</span></span></li>
             </ul>
         </div>
@@ -150,7 +167,7 @@
                     <p class="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white mb-6">150,000<span class="text-lg text-neutral-500 font-normal">원 / 1회</span></p>
                     <ul class="space-y-3 mb-8 text-neutral-700 dark:text-neutral-300 text-sm flex-grow">
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">모임이 끝날 때까지 시간 제한 없이 촬영</span></li>
-                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">여러 명이 함께하는 모임도 OK</span></li>
+                        <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">인원이 늘어도 촬영비는 그대로, 함께 나눠 내도 OK</span></li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">촬영 당일 A컷 3~4장 보정본 전달</span></li>
                         <li class="flex items-start"><i class="ri-check-line text-brand-600 dark:text-brand-400 mr-2 text-lg leading-5 shrink-0"></i><span class="break-keep">전체 보정본은 약 한 달 전후 전달</span></li>
                     </ul>
@@ -270,22 +287,6 @@
                     <p class="text-xs text-neutral-600 dark:text-neutral-400 break-keep">고해상도 전체 보정본 전달</p>
                 </li>
             </ol>
-        </div>
-    </section>
-
-    <!-- 포트폴리오 -->
-    <section id="gallery" class="py-24 px-4 sm:px-6 md:px-12">
-        <div class="max-w-[90rem] mx-auto">
-            <div class="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-10">
-                <div>
-                    <h2 class="text-3xl md:text-[2.5rem] md:leading-tight font-bold tracking-tight text-neutral-900 dark:text-white mb-2">포트폴리오</h2>
-                    <p class="text-neutral-600 dark:text-neutral-400 break-keep text-sm">사진을 누르면 크게 볼 수 있어요. 방향키나 스와이프로 넘겨 보세요.</p>
-                </div>
-                <a href="https://x.com/zumk_work/reposts" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-brand-600 dark:text-brand-400 inline-flex items-center gap-1 hover:underline underline-offset-4">
-                    <i class="ri-twitter-x-line"></i> @zumk_work에서 더 보기
-                </a>
-            </div>
-            <div id="gallery-grid" class="columns-2 md:columns-3 xl:columns-4 gap-3 md:gap-4"></div>
         </div>
     </section>
 

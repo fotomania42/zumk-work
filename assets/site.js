@@ -9,12 +9,14 @@
         ko: {
             photo: function (i) { return '퍼슈트 촬영 사진 ' + i; },
             viewer: '사진 크게 보기', close: '닫기', prev: '이전 사진', next: '다음 사진',
-            menuOpen: '메뉴 열기', menuClose: '메뉴 닫기'
+            menuOpen: '메뉴 열기', menuClose: '메뉴 닫기',
+            more: function (n) { return '사진 ' + n + '장 더 보기'; }
         },
         en: {
             photo: function (i) { return 'Fursuit photo ' + i; },
             viewer: 'Photo viewer', close: 'Close', prev: 'Previous photo', next: 'Next photo',
-            menuOpen: 'Open menu', menuClose: 'Close menu'
+            menuOpen: 'Open menu', menuClose: 'Close menu',
+            more: function (n) { return 'Show ' + n + ' more photos'; }
         }
     };
     var t = T[lang];
@@ -79,6 +81,7 @@
     /* ---------- 갤러리 (매번 랜덤 순서) ---------- */
     var grid = document.getElementById('gallery-grid');
     var galleryList = [];
+    var galleryInitial = Z.galleryInitial || 12;
     if (grid && Z.galleryImages) {
         galleryList = Z.galleryImages.slice();
         for (var i = galleryList.length - 1; i > 0; i--) {
@@ -106,8 +109,27 @@
             zoom.innerHTML = '<i class="ri-zoom-in-line"></i>';
             btn.appendChild(zoom);
             btn.addEventListener('click', function () { openLightbox(idx); });
+            if (idx >= galleryInitial) btn.classList.add('hidden');
             grid.appendChild(btn);
         });
+
+        // 포트폴리오가 히어로 바로 아래에 있으므로, 처음엔 일부만 보여 주고 나머지는 버튼으로 펼침
+        var extra = galleryList.length - galleryInitial;
+        if (extra > 0) {
+            var moreWrap = document.createElement('div');
+            moreWrap.className = 'text-center mt-6';
+            var moreBtn = document.createElement('button');
+            moreBtn.type = 'button';
+            moreBtn.className = 'inline-flex items-center gap-1 px-5 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-sm font-semibold text-neutral-700 dark:text-neutral-200 hover:border-brand-400 hover:text-brand-600 dark:hover:text-white transition';
+            moreBtn.innerHTML = '<span></span><i class="ri-arrow-down-s-line"></i>';
+            moreBtn.firstChild.textContent = t.more(extra);
+            moreBtn.addEventListener('click', function () {
+                grid.querySelectorAll('.gallery-item.hidden').forEach(function (el) { el.classList.remove('hidden'); });
+                moreWrap.remove();
+            });
+            moreWrap.appendChild(moreBtn);
+            grid.parentNode.insertBefore(moreWrap, grid.nextSibling);
+        }
     }
 
     /* ---------- 스크롤 등장 효과 ---------- */
